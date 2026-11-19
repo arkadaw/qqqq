@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>پنل مدیریت — فروشگاه اینترنتی (نسخه نمایشی)</title>
+<link rel="stylesheet" href="assets/css/admin.css">
+<style>
+.demobar{background:#16241c;color:#fff;text-align:center;font-size:12.5px;padding:7px 10px}
+</style>
+</head>
+<body class="adm">
+<div class="demobar">نسخهٔ نمایشی — فقط نمای ظاهری پنل است؛ به دیتابیس یا سرور واقعی وصل نیست و همهٔ داده‌ها نمونه هستند.</div>
+<header class="atop">
+  <button class="amenu" type="button" data-amenu aria-label="منو">☰</button>
+  <b>پنل مدیریت — فروشگاه اینترنتی</b>
+  <div class="asearch" role="search"><input type="search" placeholder="جستجو در پنل… (مثلاً کد پستی، رنگ، لوگو)" aria-label="جستجو در پنل" autocomplete="off"></div>
+  <span class="grow"></span>
+  <a href="#" target="_blank" rel="noopener">مشاهده سایت</a>
+  <a href="login.html" class="link" style="padding:6px 10px">مدیر — خروج</a>
+</header>
+<div class="alay">
+  <div class="aback" data-aback></div>
+  <nav class="aside" data-aside>
+    <div class="aclose"><span>منو</span><button type="button" data-aclose aria-label="بستن">✕</button></div>
+
+    <div class="navrow"><a href="#" class="navlink on" data-view="dashboard">داشبورد</a></div>
+    <div class="navrow"><a href="#" class="navlink" data-view="help">راهنمای شروع کار</a></div>
+
+    <details class="ngrp" open><summary>فروش</summary>
+      <div class="navrow"><a href="#" class="navlink" data-view="orders">سفارش‌ها</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="order_settings">تنظیمات سفارش</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="reports">گزارش فروش</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="visits">آمار بازدید</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="customers">مشتریان</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="coupons">کدهای تخفیف</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="shipping">روش‌های ارسال</a></div>
+    </details>
+
+    <details class="ngrp" open><summary>کاتالوگ</summary>
+      <div class="navrow"><a href="#" class="navlink" data-view="products">محصولات</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="categories">دسته‌بندی‌ها</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="stock">موجودی</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="reviews">نظرات و پرسش‌ها</a></div>
+    </details>
+
+    <details class="ngrp"><summary>محتوا</summary>
+      <div class="navrow"><a href="#" class="navlink" data-view="articles">مقاله‌ها</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="pages">صفحات</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="banners">بنرها</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="menus">منوها و فوتر</a></div>
+    </details>
+
+    <details class="ngrp" open><summary>ظاهر و ارتباط</summary>
+      <div class="navrow"><a href="#" class="navlink" data-view="appearance">ظاهر و چیدمان</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="home">محتوای صفحه اصلی</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="support">پشتیبانی شناور</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="contact">تماس و پیام‌ها</a></div>
+    </details>
+
+    <details class="ngrp"><summary>تنظیمات</summary>
+      <div class="navrow"><a href="#" class="navlink" data-view="store_settings">تنظیمات پنل</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="payment">درگاه پرداخت</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="sms">پیامک</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="integrations">اتصالات</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="password">رمز عبور</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="security">امنیت</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="code">کد تحلیلگر</a></div>
+      <div class="navrow"><a href="#" class="navlink" data-view="admins">مدیران و دسترسی‌ها</a></div>
+    </details>
+  </nav>
+
+  <main class="amain">
+
+    <!-- ===================== داشبورد ===================== -->
+    <section class="view on" id="view-dashboard">
+      <h1>داشبورد</h1>
+      <div class="stats">
+        <div class="stat"><b>۴,۸۲۰,۰۰۰</b><span>فروش امروز (تومان) — ۶ سفارش پرداخت‌شده</span></div>
+        <div class="stat"><b>۲۹,۱۵۰,۰۰۰</b><span>فروش ۷ روز اخیر (تومان) — ۳۸ سفارش پرداخت‌شده</span></div>
+        <div class="stat"><b>۱۰۴,۴۰۰,۰۰۰</b><span>فروش ۳۰ روز اخیر (تومان) — ۱۵۲ سفارش پرداخت‌شده</span></div>
+      </div>
+      <div class="stats">
+        <a class="stat" href="#" data-view="orders"><b>۶</b><span>سفارش پرداخت‌شده (جدید)</span></a>
+        <a class="stat" href="#" data-view="orders"><b>۳</b><span>در حال پردازش</span></a>
+        <a class="stat" href="#" data-view="orders"><b>۱</b><span>نیازمند بررسی پرداخت</span></a>
+        <a class="stat" href="#" data-view="orders"><b>۹</b><span>سفارش امروز</span></a>
+        <a class="stat" href="#" data-view="contact"><b>۲</b><span>پیام خوانده‌نشده</span></a>
+      </div>
+      <div class="card">
+        <h2>کم‌موجودی</h2>
+        <table><tr><th>محصول</th><th>موجودی</th></tr>
+          <tr><td>تابلو دکوراتیو ماه</td><td>۲</td></tr>
+          <tr><td>گلدان سرامیکی کوچک</td><td>۱</td></tr>
+          <tr><td>چراغ‌خواب چوبی</td><td>۳</td></tr>
+        </table>
+        <a href="#" data-view="stock">مدیریت موجودی</a>
+      </div>
+    </section>
+
+    <!-- ===================== راهنمای شروع کار ===================== -->
+    <section class="view" id="view-help">
+      <h1>راهنمای شروع کار</h1>
+      <p class="mut">اگر تازه شروع کرده‌اید، این مراحل را به‌ترتیب انجام دهید. هر مرحله دکمه‌ای دارد که شما را به همان بخش می‌برد. هرجای پنل دکمهٔ «؟» دیدید، روی آن بزنید تا توضیح ساده بگیرید. بالای صفحه هم کادر «جستجو در پنل» است؛ هر چیزی را که نمی‌دانید کجاست آنجا بنویسید.</p>
+      <div class="stack">
+        <div class="card"><h2>۱. نام و ظاهر فروشگاه</h2><p>نام فروشگاه، شعار، لوگو و رنگ اصلی را بنویسید و ذخیره کنید. از «ظاهر و چیدمان» می‌توانید ترتیب بخش‌های صفحهٔ اصلی را هم عوض کنید.</p><p><a class="btn ghost" href="#" data-view="appearance">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۲. اطلاعات تماس</h2><p>تلفن، ایمیل، نشانی و لینک شبکه‌های اجتماعی (اینستاگرام، روبیکا، بله، ایتا و ...). فقط موارد پرشده در سایت دیده می‌شود.</p><p><a class="btn ghost" href="#" data-view="contact">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۳. دسته‌بندی‌ها</h2><p>اول چند دستهٔ اصلی بسازید (مثلاً «تابلو»، «مجسمه»). بعد محصولات را داخل آن‌ها می‌گذارید.</p><p><a class="btn ghost" href="#" data-view="categories">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۴. محصولات</h2><p>روی «+ محصول جدید» بزنید؛ نام، قیمت، موجودی و عکس را بنویسید. اگر محصول رنگ یا اندازهٔ مختلف دارد، نوع را «متغیر» بگذارید. محصولات «[نمونه]» را پاک کنید.</p><p><a class="btn ghost" href="#" data-view="products">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۵. روش‌های ارسال</h2><p>هزینهٔ ارسال را خودتان تعیین کنید و بعد تیک «بررسی و تأیید کرده‌ام» را بزنید.</p><p><a class="btn ghost" href="#" data-view="shipping">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۶. تنظیمات سفارش</h2><p>کد پستی اجباری باشد یا نه، حداقل مبلغ سفارش، مدت رزرو موجودی و هشدار کم‌موجودی را اینجا بگذارید.</p><p><a class="btn ghost" href="#" data-view="order_settings">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۷. روش پرداخت</h2><p>برای فروش واقعی یک درگاه را فعال کنید (کلیدها در «اتصالات»). برای تست یا پرداخت در محل، گزینهٔ «ثبت سفارش بدون پرداخت آنلاین» را روشن کنید.</p><p><a class="btn ghost" href="#" data-view="payment">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۸. یک سفارش آزمایشی بدهید</h2><p>از سایت یک کالا بخرید و ببینید سفارش در «سفارش‌ها» می‌آید. وضعیت‌ها را امتحان کنید.</p><p><a class="btn ghost" href="#" data-view="orders">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۹. صفحه‌های قوانین</h2><p>درباره ما، قوانین و حریم خصوصی را با متن واقعی خودتان بنویسید (ویرایشگر متن مثل وردپرس است).</p><p><a class="btn ghost" href="#" data-view="pages">رفتن به این بخش</a></p></div>
+        <div class="card"><h2>۱۰. امنیت</h2><p>رمز قوی بگذارید و «ورود دومرحله‌ای» را روشن کنید. رمز اولیه را عوض کنید.</p><p><a class="btn ghost" href="#" data-view="security">رفتن به این بخش</a></p></div>
+      </div>
+      <div class="card"><h2>نکته‌های مهم</h2><ul><li>تغییرات هر صفحه با دکمهٔ «ذخیره» همان صفحه ثبت می‌شود.</li><li>برای ویرایش هر مورد (دسته، بنر، کد تخفیف، ...) روی «ویرایش» بزنید تا وارد صفحهٔ مخصوص همان مورد شوید.</li><li>برای هر عکسی که می‌گذارید، «متن جایگزین تصویر» را بنویسید؛ به گوگل کمک می‌کند.</li><li>اگر ظاهر سایت را خراب کردید: «تنظیمات پنل» ← «بازنشانی ظاهر».</li></ul></div>
+    </section>
+
+    <!-- ===================== سفارش‌ها ===================== -->
+    <section class="view" id="view-orders">
+      <h1>سفارش‌ها <small>(۱۵۲)</small></h1>
+      <form class="card inline" onsubmit="return false">
+        <input placeholder="شماره سفارش، موبایل، نام یا شهر">
+        <select><option value="">همه وضعیت‌ها</option><option>در انتظار پرداخت</option><option>نیازمند بررسی پرداخت</option><option>پرداخت‌شده</option><option>در حال پردازش</option><option>ارسال‌شده</option><option>تحویل‌شده</option><option>لغوشده</option><option>منقضی‌شده</option></select>
+        <button class="btn" type="submit">جستجو</button>
+        <a class="btn ghost" href="#">دریافت CSV</a>
+      </form>
+      <div class="card scroll">
+        <table>
+          <tr><th>شماره</th><th>مشتری</th><th>موبایل</th><th>مبلغ (تومان)</th><th>وضعیت</th><th>تاریخ</th></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۸۲</a></td><td>سارا محمدی</td><td dir="ltr">۰۹۱۲۱۲۳۴۵۶۷</td><td>۱,۴۵۰,۰۰۰</td><td><span class="pill s-paid">پرداخت‌شده</span></td><td>۱۴۰۵/۰۸/۲۸</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۸۱</a></td><td>علی رضایی</td><td dir="ltr">۰۹۱۳۴۴۵۶۷۸۹</td><td>۸۹۰,۰۰۰</td><td><span class="pill s-processing">در حال پردازش</span></td><td>۱۴۰۵/۰۸/۲۸</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۸۰</a></td><td>نگار احمدی</td><td dir="ltr">۰۹۱۹۸۸۷۷۶۶۵</td><td>۲,۱۰۰,۰۰۰</td><td><span class="pill s-shipped">ارسال‌شده</span></td><td>۱۴۰۵/۰۸/۲۷</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۷۹</a></td><td>امیر حسینی</td><td dir="ltr">۰۹۳۵۱۱۲۲۳۳۴</td><td>۶۲۰,۰۰۰</td><td><span class="pill s-delivered">تحویل‌شده</span></td><td>۱۴۰۵/۰۸/۲۶</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۷۸</a></td><td>مریم کریمی</td><td dir="ltr">۰۹۱۲۳۳۴۴۵۵۶</td><td>۳۴۰,۰۰۰</td><td><span class="pill s-payment_review">نیازمند بررسی</span></td><td>۱۴۰۵/۰۸/۲۶</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۷۷</a></td><td>زهرا قاسمی</td><td dir="ltr">۰۹۱۸۷۷۷۸۸۹۹</td><td>۱,۹۸۰,۰۰۰</td><td><span class="pill s-cancelled">لغوشده</span></td><td>۱۴۰۵/۰۸/۲۵</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۷۶</a></td><td>حسین نوری</td><td dir="ltr">۰۹۱۱۲۲۳۴۴۵۵</td><td>۷۵۰,۰۰۰</td><td><span class="pill s-pending_payment">در انتظار پرداخت</span></td><td>۱۴۰۵/۰۸/۲۵</td></tr>
+          <tr><td><a href="#" data-view="order">۱۰۴۷۵</a></td><td>فاطمه صادقی</td><td dir="ltr">۰۹۱۴۵۵۶۶۷۷۸</td><td>۴۸۰,۰۰۰</td><td><span class="pill s-expired">منقضی‌شده</span></td><td>۱۴۰۵/۰۸/۲۴</td></tr>
+        </table>
+      </div>
+      <nav class="pager"><a class="on" href="#">۱</a><a href="#">۲</a><a href="#">۳</a><a href="#">۴</a></nav>
+    </section>
+
+    <!-- ===================== سفارش (جزئیات) ===================== -->
+    <section class="view" id="view-order">
+      <h1>سفارش ۱۰۴۸۲ <span class="pill s-paid">پرداخت‌شده</span></h1>
+      <div class="grid2">
+        <div class="card"><h2>مشتری</h2>
+          <p>سارا محمدی — ۰۹۱۲۱۲۳۴۵۶۷</p>
+          <p>تهران، تهران</p>
+          <p>خیابان ولیعصر، نرسیده به میدان ونک، پلاک ۱۲، واحد ۳</p>
+          <p>کد پستی: ۱۹۳۸۷۴۵۶۱۲</p>
+          <p><b>توضیح مشتری:</b> لطفاً بسته‌بندی هدیه باشد، تشکر.</p>
+          <p class="mut">ثبت: ۱۴۰۵/۰۸/۲۸ ۱۰:۱۴ — پرداخت: ۱۴۰۵/۰۸/۲۸ ۱۰:۱۷</p>
+        </div>
+        <div class="card">
+          <h2>تغییر وضعیت</h2>
+          <form class="inline" onsubmit="return false">
+            <select><option>در حال پردازش</option><option>ارسال‌شده</option><option>تحویل‌شده</option><option>لغو (و بازگرداندن موجودی)</option></select>
+            <button class="btn" type="submit">ثبت</button>
+          </form>
+          <p class="mut">وضعیت «پرداخت‌شده» فقط پس از تأیید رسمی درگاه به‌صورت خودکار ثبت می‌شود.</p>
+          <h2>یادداشت مدیریتی (برای مشتری نمایش داده نمی‌شود)</h2>
+          <form onsubmit="return false"><textarea rows="4">مشتری قبلاً هم خرید کرده؛ ارسال اولویت‌دار.</textarea><button class="btn" type="submit">ذخیره یادداشت</button></form>
+        </div>
+      </div>
+      <div class="card scroll"><h2>اقلام</h2>
+        <table><tr><th>کالا</th><th>کد</th><th>قیمت واحد</th><th>تعداد</th><th>جمع</th></tr>
+          <tr><td>تابلو دکوراتیو ماه — مشکی</td><td dir="ltr">TBL-MOON-BLK</td><td>۱,۴۵۰,۰۰۰</td><td>۱</td><td>۱,۴۵۰,۰۰۰</td></tr>
+          <tr><td colspan="4">جمع اقلام</td><td>۱,۴۵۰,۰۰۰</td></tr>
+          <tr><td colspan="4">کد تخفیف WELCOME10</td><td>−۱۴۵,۰۰۰</td></tr>
+          <tr><td colspan="4">ارسال (پست پیشتاز)</td><td>۴۵,۰۰۰</td></tr>
+          <tr><th colspan="4">مبلغ کل (تومان)</th><th>۱,۳۵۰,۰۰۰</th></tr>
+        </table>
+      </div>
+      <div class="grid2">
+        <div class="card scroll"><h2>پرداخت‌ها</h2>
+          <table><tr><th>درگاه</th><th>مبلغ</th><th>وضعیت</th><th>شناسه پیگیری</th><th>زمان</th></tr>
+            <tr><td>زرین‌پال</td><td>۱,۳۵۰,۰۰۰</td><td>موفق</td><td dir="ltr">A000012345678</td><td>۱۴۰۵/۰۸/۲۸ ۱۰:۱۷</td></tr>
+          </table>
+        </div>
+        <div class="card"><h2>تاریخچه</h2>
+          <ul class="log">
+            <li>۱۴۰۵/۰۸/۲۸ ۱۰:۱۴ — سفارش ثبت شد <small class="mut">(مشتری)</small></li>
+            <li>۱۴۰۵/۰۸/۲۸ ۱۰:۱۷ — پرداخت تأیید شد <small class="mut">(سامانه)</small></li>
+            <li>۱۴۰۵/۰۸/۲۸ ۱۱:۰۲ — یادداشت مدیریتی ثبت شد <small class="mut">(admin)</small></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card scroll"><h2>صفحاتی که این مشتری قبل از سفارش دیده</h2>
+        <table><tr><th>زمان</th><th>نوع</th><th>صفحه/محصول</th></tr>
+          <tr><td>۱۴۰۵/۰۸/۲۸ ۰۹:۵۰</td><td>خانه</td><td dir="ltr">/</td></tr>
+          <tr><td>۱۴۰۵/۰۸/۲۸ ۰۹:۵۲</td><td>دسته‌بندی</td><td>تابلو و دکوری دیواری</td></tr>
+          <tr><td>۱۴۰۵/۰۸/۲۸ ۰۹:۵۵</td><td>محصول</td><td>تابلو دکوراتیو ماه</td></tr>
+        </table>
+        <p class="mut">این فهرست بر اساس شناسهٔ ناشناسِ مرورگر مشتری است، نه حساب کاربری؛ اگر از چند دستگاه خرید کرده باشد، فقط همان مرورگری که سفارش را نهایی کرده دیده می‌شود.</p>
+      </div>
+      <p><a class="btn ghost" href="#" data-view="orders">← بازگشت به فهرست سفارش‌ها</a></p>
+    </section>
+
+    <!-- ===================== تنظیمات سفارش ===================== -->
+    <section class="view" id="view-order_settings">
+      <h1>تنظیمات سفارش</h1>
+      <p class="mut">هر چیزی که به «خرید و ثبت سفارش» مربوط است اینجاست. روش پرداخت را در «درگاه پرداخت»، هزینهٔ ارسال را در «روش‌های ارسال» تنظیم کنید.</p>
+      <form class="card stack" onsubmit="return false">
+        <h2>ورود و ثبت‌نام مشتری</h2>
+        <label class="chk"><input type="checkbox"> ورود یا ثبت‌نام قبل از «افزودن به سبد خرید» الزامی باشد</label>
+        <label class="chk"><input type="checkbox"> ورود یا ثبت‌نام قبل از «ادامه ثبت سفارش» الزامی باشد (خرید مهمان غیرفعال می‌شود)</label>
+        <h2>فرم ثبت سفارش</h2>
+        <label class="chk"><input type="checkbox" checked> وارد کردن کد پستی اجباری باشد</label>
+        <label class="chk"><input type="checkbox" checked> فیلد «توضیحات سفارش» در تسویه‌حساب نمایش داده شود</label>
+        <h2>محدودیت‌های سفارش</h2>
+        <label>حداقل مبلغ سفارش (تومان؛ ۰ = بدون محدودیت)<input value="۰"></label>
+        <label>حداکثر تعداد از هر محصول در یک ردیف سبد (۱ تا ۲۰)<input value="۲۰"></label>
+        <h2>تأیید قوانین پیش از پرداخت</h2>
+        <label class="chk"><input type="checkbox" checked> پیش از ثبت سفارش، تیک «قوانین و مقررات را مطالعه کردم و می‌پذیرم» الزامی باشد</label>
+        <div class="grid2">
+          <label>صفحهٔ اول (مثلاً «قوانین و مقررات»)<select><option>— انتخاب نشده —</option><option selected>قوانین و مقررات</option><option>درباره ما</option><option>حریم خصوصی</option></select></label>
+          <label>صفحهٔ دوم (اختیاری — مثلاً «حریم خصوصی»)<select><option>— انتخاب نشده —</option><option>درباره ما</option><option selected>حریم خصوصی</option></select></label>
+        </div>
+        <p class="mut">صفحه‌ها را از «محتوا ← صفحات» می‌سازید. اگر تیک بالا را بزنید ولی هیچ صفحه‌ای انتخاب نکنید، فقط متن تأیید نمایش داده می‌شود (بدون لینک).</p>
+        <h2>موجودی</h2>
+        <label>مدت رزرو موجودی پس از ثبت سفارش (دقیقه، ۱۰ تا ۲۴۰)<input value="۳۰"></label>
+        <label>آستانه هشدار کم‌موجودی<input value="۳"></label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== گزارش فروش ===================== -->
+    <section class="view" id="view-reports">
+      <h1>گزارش فروش</h1>
+      <form class="card" onsubmit="return false"><label>بازهٔ زمانی<select><option>۷ روز اخیر</option><option selected>۳۰ روز اخیر</option><option>۹۰ روز اخیر</option><option>یک سال اخیر</option></select></label>
+        <span class="mut"> فقط سفارش‌های پرداخت‌شده (پرداخت‌شده، در حال پردازش، ارسال‌شده، تحویل‌شده) حساب می‌شود.</span></form>
+      <div class="grid3">
+        <div class="card"><small class="mut">فروش کل</small><h2>۱۰۴,۴۰۰,۰۰۰ <small>تومان</small></h2></div>
+        <div class="card"><small class="mut">تعداد سفارش</small><h2>۱۵۲</h2></div>
+        <div class="card"><small class="mut">میانگین هر سفارش</small><h2>۶۸۶,۸۴۲ <small>تومان</small></h2></div>
+        <div class="card"><small class="mut">مشتری‌های خریدار</small><h2>۱۱۸</h2></div>
+        <div class="card"><small class="mut">مجموع تخفیف کد</small><h2>۳,۸۰۰,۰۰۰ <small>تومان</small></h2></div>
+        <div class="card"><small class="mut">مجموع هزینهٔ ارسال</small><h2>۴,۹۵۰,۰۰۰ <small>تومان</small></h2></div>
+      </div>
+      <div class="card"><h2>فروش روزانه</h2>
+        <svg viewBox="0 0 720 222" role="img" aria-label="نمودار فروش روزانه" style="width:100%;height:auto">
+          <rect x="4" y="90" width="18" height="110" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۸ — ۹ سفارش — ۴,۸۲۰,۰۰۰ تومان</title></rect>
+          <rect x="28" y="130" width="18" height="70" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۷ — ۶ سفارش — ۳,۱۰۰,۰۰۰ تومان</title></rect>
+          <rect x="52" y="60" width="18" height="140" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۶ — ۱۲ سفارش — ۶,۲۰۰,۰۰۰ تومان</title></rect>
+          <rect x="76" y="150" width="18" height="50" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۵ — ۴ سفارش — ۲,۴۰۰,۰۰۰ تومان</title></rect>
+          <rect x="100" y="20" width="18" height="180" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۴ — ۱۸ سفارش — ۸,۹۰۰,۰۰۰ تومان</title></rect>
+          <rect x="124" y="110" width="18" height="90" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۳ — ۷ سفارش — ۳,۸۰۰,۰۰۰ تومان</title></rect>
+          <rect x="148" y="170" width="18" height="30" rx="2" fill="#A6512C"><title>۱۴۰۵/۰۸/۲۲ — ۲ سفارش — ۱,۱۰۰,۰۰۰ تومان</title></rect>
+          <line x1="0" y1="200" x2="720" y2="200" stroke="#ccc"/>
+          <text x="720" y="216" font-size="11" text-anchor="end" fill="#707770">۱۴۰۵/۰۷/۲۹</text>
+          <text x="0" y="216" font-size="11" fill="#707770">۱۴۰۵/۰۸/۲۸</text>
+        </svg>
+        <p class="mut">بالاترین روز: ۸,۹۰۰,۰۰۰ تومان. نشانگر را روی هر ستون ببرید تا عدد همان روز دیده شود.</p>
+      </div>
+      <div class="grid2">
+        <div class="card scroll"><h2>پرفروش‌ترین محصولات</h2><table><tr><th>محصول</th><th>تعداد</th><th>مبلغ (تومان)</th></tr>
+          <tr><td>تابلو دکوراتیو ماه</td><td>۴۲</td><td>۴۵,۴۰۰,۰۰۰</td></tr>
+          <tr><td>گلدان سرامیکی کوچک</td><td>۳۱</td><td>۱۸,۶۰۰,۰۰۰</td></tr>
+          <tr><td>ست دکوری سه‌تکه</td><td>۱۹</td><td>۲۲,۸۰۰,۰۰۰</td></tr>
+          <tr><td>آینه دکوراتیو گرد</td><td>۱۲</td><td>۹,۶۰۰,۰۰۰</td></tr>
+        </table></div>
+        <div class="card scroll"><h2>به تفکیک درگاه</h2><table><tr><th>درگاه</th><th>تعداد</th><th>مبلغ (تومان)</th></tr>
+          <tr><td>زرین‌پال</td><td>۱۲۸</td><td>۸۹,۱۰۰,۰۰۰</td></tr>
+          <tr><td>آزمایشی</td><td>۲۴</td><td>۱۵,۳۰۰,۰۰۰</td></tr>
+        </table></div>
+        <div class="card scroll"><h2>به تفکیک استان</h2><table><tr><th>استان</th><th>سفارش</th><th>مبلغ (تومان)</th></tr>
+          <tr><td>تهران</td><td>۷۴</td><td>۵۱,۲۰۰,۰۰۰</td></tr>
+          <tr><td>اصفهان</td><td>۲۲</td><td>۱۴,۱۰۰,۰۰۰</td></tr>
+          <tr><td>خراسان رضوی</td><td>۱۸</td><td>۱۱,۸۰۰,۰۰۰</td></tr>
+        </table></div>
+        <div class="card scroll"><h2>وضعیت همهٔ سفارش‌های ثبت‌شده</h2><table><tr><th>وضعیت</th><th>تعداد</th></tr>
+          <tr><td>پرداخت‌شده</td><td>۶</td></tr><tr><td>در حال پردازش</td><td>۳</td></tr><tr><td>ارسال‌شده</td><td>۵</td></tr><tr><td>تحویل‌شده</td><td>۱۳۲</td></tr><tr><td>لغوشده</td><td>۴</td></tr><tr><td>منقضی‌شده</td><td>۲</td></tr>
+        </table></div>
+      </div>
+      <p><a class="btn ghost" href="#">دریافت سفارش‌ها (CSV)</a></p>
+    </section>
+
+    <!-- ===================== آمار بازدید ===================== -->
+    <section class="view" id="view-visits">
+      <h1>آمار بازدید</h1>
+      <form class="card" onsubmit="return false"><label>بازهٔ زمانی<select><option>۷ روز اخیر</option><option selected>۳۰ روز اخیر</option><option>۹۰ روز اخیر</option><option>یک سال اخیر</option></select></label>
+        <span class="mut"> «بازدید یکتا» یعنی یک آی‌پی در یک روز برای یک صفحه فقط یک‌بار شمرده می‌شود، حتی اگر چندبار آن صفحه را باز کرده باشد.</span></form>
+      <div class="grid3">
+        <div class="card"><small class="mut">بازدید یکتا (آی‌پی+روز)</small><h2>۳,۴۸۰</h2></div>
+        <div class="card"><small class="mut">مجموع بازدیدها (خام)</small><h2>۹,۲۱۰</h2></div>
+        <div class="card"><small class="mut">آی‌پی‌های متفاوت</small><h2>۱,۱۰۵</h2></div>
+      </div>
+      <div class="card"><h2>نمودار بازدید روزانه</h2>
+        <svg viewBox="0 0 720 180" role="img" aria-label="نمودار بازدید روزانه" style="width:100%;height:auto">
+          <rect x="4" y="60" width="18" height="100" rx="2" fill="#1C4A85"/>
+          <rect x="28" y="40" width="18" height="120" rx="2" fill="#1C4A85"/>
+          <rect x="52" y="90" width="18" height="70" rx="2" fill="#1C4A85"/>
+          <rect x="76" y="20" width="18" height="140" rx="2" fill="#1C4A85"/>
+          <rect x="100" y="70" width="18" height="90" rx="2" fill="#1C4A85"/>
+          <rect x="124" y="100" width="18" height="60" rx="2" fill="#1C4A85"/>
+          <rect x="148" y="110" width="18" height="50" rx="2" fill="#1C4A85"/>
+          <line x1="0" y1="160" x2="720" y2="160" stroke="#ccc"/>
+        </svg>
+      </div>
+      <div class="card scroll"><h2>پربازدیدترین صفحات</h2>
+        <table><tr><th>صفحه</th><th>نوع</th><th>بازدید یکتا</th><th>مجموع بازدید</th><th>آخرین بازدید</th></tr>
+          <tr><td dir="ltr" style="text-align:left">/</td><td>خانه</td><td>۱,۲۱۰</td><td>۳,۰۵۰</td><td>۱۴۰۵/۰۸/۲۸ ۲۲:۱۰</td></tr>
+          <tr><td dir="ltr" style="text-align:left">/products</td><td>فهرست محصولات</td><td>۸۹۰</td><td>۲,۱۰۰</td><td>۱۴۰۵/۰۸/۲۸ ۲۱:۵۰</td></tr>
+          <tr><td dir="ltr" style="text-align:left">/product/moon-decor<br><small class="mut">تابلو دکوراتیو ماه</small></td><td>محصول</td><td>۵۴۰</td><td>۱,۳۲۰</td><td>۱۴۰۵/۰۸/۲۸ ۲۰:۱۵</td></tr>
+          <tr><td dir="ltr" style="text-align:left">/category/wall-decor<br><small class="mut">تابلو و دکوری دیواری</small></td><td>دسته‌بندی</td><td>۳۰۵</td><td>۷۴۰</td><td>۱۴۰۵/۰۸/۲۸ ۱۹:۴۰</td></tr>
+          <tr><td dir="ltr" style="text-align:left">/page/about<br><small class="mut">درباره ما</small></td><td>صفحهٔ متنی</td><td>۱۴۰</td><td>۳۲۰</td><td>۱۴۰۵/۰۸/۲۷ ۱۸:۰۵</td></tr>
+        </table>
+      </div>
+      <p class="mut">تاریخچهٔ بازدید هر مشتری قبل از سفارش، داخل همان سفارش (صفحهٔ سفارش‌ها) نمایش داده می‌شود.</p>
+    </section>
+
+    <!-- ===================== مشتریان ===================== -->
+    <section class="view" id="view-customers">
+      <h1>مشتریان <small>(حساب‌های ثبت‌شده با موبایل)</small></h1>
+      <form class="card inline" onsubmit="return false"><input placeholder="موبایل یا نام"><button class="btn" type="submit">جستجو</button><a class="btn ghost" href="#">دریافت CSV</a></form>
+      <div class="card scroll">
+        <table><tr><th>موبایل</th><th>نام</th><th>عضویت</th><th>آخرین ورود</th><th>سفارش پرداخت‌شده</th><th>جمع خرید (تومان)</th></tr>
+          <tr><td dir="ltr">۰۹۱۲۱۲۳۴۵۶۷</td><td>سارا محمدی</td><td>۱۴۰۵/۰۴/۱۲</td><td>۱۴۰۵/۰۸/۲۸</td><td>۵</td><td>۶,۸۰۰,۰۰۰</td></tr>
+          <tr><td dir="ltr">۰۹۱۳۴۴۵۶۷۸۹</td><td>علی رضایی</td><td>۱۴۰۵/۰۵/۰۳</td><td>۱۴۰۵/۰۸/۲۸</td><td>۲</td><td>۱,۷۸۰,۰۰۰</td></tr>
+          <tr><td dir="ltr">۰۹۱۹۸۸۷۷۶۶۵</td><td>نگار احمدی</td><td>۱۴۰۵/۰۲/۲۰</td><td>۱۴۰۵/۰۸/۲۷</td><td>۸</td><td>۱۱,۲۰۰,۰۰۰</td></tr>
+          <tr><td dir="ltr">۰۹۳۵۱۱۲۲۳۳۴</td><td>امیر حسینی</td><td>۱۴۰۵/۰۶/۰۱</td><td>۱۴۰۵/۰۸/۲۶</td><td>۱</td><td>۶۲۰,۰۰۰</td></tr>
+          <tr><td dir="ltr">۰۹۱۲۳۳۴۴۵۵۶</td><td>مریم کریمی</td><td>۱۴۰۵/۰۱/۱۵</td><td>—</td><td>۰</td><td>۰</td></tr>
+          <tr><td dir="ltr">۰۹۱۸۷۷۷۸۸۹۹</td><td>زهرا قاسمی</td><td>۱۴۰۵/۰۷/۰۹</td><td>۱۴۰۵/۰۸/۲۵</td><td>۳</td><td>۴,۲۰۰,۰۰۰</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== کدهای تخفیف (فهرست) ===================== -->
+    <section class="view" id="view-coupons">
+      <h1>کدهای تخفیف</h1>
+      <p class="mut">اعتبار و مبلغ تخفیف هنگام ثبت سفارش دوباره در سرور بررسی می‌شود؛ مشتری نمی‌تواند آن را دستکاری کند.</p>
+      <p><a class="btn" href="#" data-view="coupon_form">+ کد تخفیف جدید</a></p>
+      <div class="card scroll">
+        <table><tr><th>کد</th><th>مقدار</th><th>استفاده</th><th>وضعیت</th><th></th></tr>
+          <tr><td dir="ltr">WELCOME10</td><td>۱۰٪</td><td>۱۸۴ / ۵۰۰</td><td>فعال</td><td class="act"><a href="#" data-view="coupon_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td dir="ltr">SEND0</td><td>—</td><td>۴۲</td><td>فعال</td><td class="act"><a href="#" data-view="coupon_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td dir="ltr">OFF50</td><td>۵۰,۰۰۰ تومان</td><td>۹ / ۱۰۰</td><td>غیرفعال</td><td class="act"><a href="#" data-view="coupon_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td dir="ltr">NOWRUZ1404</td><td>۱۵٪</td><td>۳۰۱ / ۳۰۰</td><td>غیرفعال</td><td class="act"><a href="#" data-view="coupon_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== کد تخفیف (فرم) ===================== -->
+    <section class="view" id="view-coupon_form">
+      <h1>ویرایش کد تخفیف: WELCOME10</h1>
+      <p><a class="btn ghost" href="#" data-view="coupons">← بازگشت به فهرست</a></p>
+      <form class="card stack" onsubmit="return false">
+        <h2>ویرایش کد</h2>
+        <label>کد (انگلیسی/عدد)<input dir="ltr" value="WELCOME10"></label>
+        <label>نوع<select><option selected>درصدی</option><option>مبلغ ثابت (تومان)</option></select></label>
+        <label>مقدار<input value="۱۰"></label>
+        <label>حداقل مبلغ سفارش (۰ = بدون محدودیت)<input value="۰"></label>
+        <label>سقف تخفیف برای نوع درصدی (۰ = بدون سقف)<input value="۲۰۰۰۰۰"></label>
+        <label>شروع اعتبار<input type="datetime-local" value="2026-10-01T00:00"></label>
+        <label>پایان اعتبار<input type="datetime-local" value="2026-12-29T23:59"></label>
+        <label>حداکثر دفعات استفاده (۰ = نامحدود)<input value="۵۰۰"></label>
+        <label class="chk"><input type="checkbox" checked> فعال</label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== روش‌های ارسال (فهرست) ===================== -->
+    <section class="view" id="view-shipping">
+      <h1>روش‌های ارسال</h1>
+      <p class="mut">هزینه ارسال را خودتان تعیین می‌کنید (تومان). «ارسال رایگان از مبلغ» اختیاری است (۰ = غیرفعال).</p>
+      <div class="flash err">هزینه‌های ارسال هنوز به‌عنوان «بررسی‌شده» تأیید نشده‌اند. پس از تنظیم، تیک تأیید را بزنید.</div>
+      <p><a class="btn" href="#" data-view="shipping_form">+ روش ارسال جدید</a></p>
+      <div class="card scroll">
+        <table><tr><th>عنوان</th><th>هزینه</th><th>رایگان از</th><th>وضعیت</th><th></th></tr>
+          <tr><td>پست پیشتاز</td><td>۴۵,۰۰۰</td><td>۱,۵۰۰,۰۰۰</td><td>فعال</td><td class="act"><a href="#" data-view="shipping_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>تیپاکس</td><td>۶۰,۰۰۰</td><td>—</td><td>فعال</td><td class="act"><a href="#" data-view="shipping_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>پیک تهران (تحویل همان‌روز)</td><td>۸۰,۰۰۰</td><td>۲,۰۰۰,۰۰۰</td><td>غیرفعال</td><td class="act"><a href="#" data-view="shipping_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+        </table>
+        <form class="inline" onsubmit="return false"><label class="chk"><input type="checkbox"> هزینه‌ها را بررسی و تأیید کرده‌ام</label><button class="btn ghost" type="submit">ثبت</button></form>
+      </div>
+    </section>
+
+    <!-- ===================== روش ارسال (فرم) ===================== -->
+    <section class="view" id="view-shipping_form">
+      <h1>ویرایش روش ارسال: پست پیشتاز</h1>
+      <p><a class="btn ghost" href="#" data-view="shipping">← بازگشت به فهرست</a></p>
+      <form class="card stack" onsubmit="return false">
+        <h2>ویرایش روش</h2>
+        <label>عنوان (مثلاً پیک تهران)<input value="پست پیشتاز"></label>
+        <label>توضیح (زمان تحویل و ...)<input value="تحویل ۲ تا ۴ روز کاری به سراسر کشور"></label>
+        <label>هزینه (تومان)<input value="۴۵۰۰۰"></label>
+        <label>ارسال رایگان از مبلغ<input value="۱۵۰۰۰۰۰"></label>
+        <label>ترتیب<input value="۱"></label>
+        <label class="chk"><input type="checkbox" checked> فعال</label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== محصولات (فهرست) ===================== -->
+    <section class="view" id="view-products">
+      <p><a class="btn ghost" href="#" data-view="products_import">ورود/خروج گروهی (CSV)</a></p>
+      <h1>محصولات <small>(۸۴)</small> <a class="btn" href="#" data-view="product_form">+ محصول جدید</a></h1>
+      <form class="card inline" onsubmit="return false">
+        <input placeholder="نام یا کد محصول">
+        <select><option value="">همه</option><option>منتشرشده</option><option>پیش‌نویس</option></select>
+        <button class="btn" type="submit">جستجو</button>
+      </form>
+      <div class="card scroll">
+        <table>
+          <tr><th></th><th>نام</th><th>کد</th><th>نوع</th><th>قیمت (تومان)</th><th>موجودی</th><th>وضعیت</th><th></th></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">تابلو دکوراتیو ماه</a></td><td dir="ltr">TBL-MOON</td><td>متغیر</td><td>۱,۴۵۰,۰۰۰</td><td>۲</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">گلدان سرامیکی کوچک</a></td><td dir="ltr">VAS-CER-S</td><td>ساده</td><td>۳۹۰,۰۰۰</td><td>۱</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">چراغ‌خواب چوبی</a></td><td dir="ltr">LMP-WOOD</td><td>ساده</td><td>۷۲۰,۰۰۰</td><td>۳</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">ست دکوری سه‌تکه</a></td><td dir="ltr">SET-3PC</td><td>ساده</td><td>۱,۲۰۰,۰۰۰</td><td>۰</td><td><span class="pill s-expired">پیش‌نویس</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">آینه دکوراتیو گرد</a></td><td dir="ltr">MIR-RND</td><td>متغیر</td><td>۹۸۰,۰۰۰</td><td>۷</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">شمعدان فلزی طرح برگ</a></td><td dir="ltr">CND-LEAF</td><td>ساده</td><td>۵۴۰,۰۰۰</td><td>۱۲</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">ساعت دیواری مینیمال</a></td><td dir="ltr">CLK-MIN</td><td>متغیر</td><td>۶۸۰,۰۰۰</td><td>۵</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td><a href="#" data-view="product_form">جاکلیدی دیواری چوبی</a></td><td dir="ltr">KEY-WD</td><td>ساده</td><td>۲۹۰,۰۰۰</td><td>۱۹</td><td><span class="pill s-paid">منتشرشده</span></td><td class="act"><a href="#" data-view="product_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+        </table>
+      </div>
+      <nav class="pager"><a class="on" href="#">۱</a><a href="#">۲</a><a href="#">۳</a><a href="#">۴</a><a href="#">۵</a></nav>
+    </section>
+
+    <!-- ===================== محصول (فرم کامل) ===================== -->
+    <section class="view" id="view-product_form">
+      <h1>ویرایش: تابلو دکوراتیو ماه</h1>
+      <form class="stack" onsubmit="return false">
+        <div class="card grid2">
+          <label>نام محصول<input required value="تابلو دکوراتیو ماه"></label>
+          <label>کد محصول (SKU)<input dir="ltr" value="TBL-MOON"></label>
+          <label>نشانی (slug) — خالی = خودکار<input dir="ltr" value="moon-decor"></label>
+          <label>دسته‌بندی<select><option selected>تابلو و دکوری دیواری</option><option>دکوری میز و شلف</option><option>چراغ و نورپردازی</option><option>هدایای خاص</option></select></label>
+          <label>نوع محصول<select><option>ساده (یک قیمت و موجودی)</option><option selected>متغیر (رنگ / مدل / اندازه)</option></select></label>
+          <label>وضعیت<select><option selected>منتشرشده</option><option>پیش‌نویس (نمایش داده نمی‌شود)</option></select></label>
+        </div>
+        <div class="card scroll">
+          <h2>گزینه‌ها (تنوع)</h2>
+          <p class="mut">هر ردیف یک گزینه با قیمت و موجودی مستقل است. ردیف خالی نادیده گرفته می‌شود. قیمت و موجودی نمایشی محصول از روی گزینه‌های فعال محاسبه می‌شود.</p>
+          <div class="qadd">
+            <label>افزودن سریع رنگ‌ها با نام — مثلاً «سفید مشکی طوسی»<input placeholder="سفید مشکی طوسی" autocomplete="off"></label>
+            <label>قیمت هر گزینه (اختیاری)<input inputmode="numeric"></label>
+            <label>موجودی هر گزینه<input inputmode="numeric"></label>
+            <button class="btn ghost" type="button">افزودن رنگ‌ها</button>
+          </div>
+          <div class="swprev" aria-label="پیش‌نمایش رنگ‌ها">
+            <span class="swchip"><i style="background:#1a1a1a"></i>مشکی</span>
+            <span class="swchip"><i style="background:#c9a15a"></i>طلایی</span>
+          </div>
+          <p class="mut">رنگ هر ردیف همیشه قابل تغییر است: روی مربع رنگ کلیک کنید یا نام را اصلاح کنید.</p>
+          <table>
+            <tr><th>عنوان (مثلاً مشکی)</th><th>کد</th><th>رنگ (برای گزینه‌های بدون رنگ، «بدون رنگ» را تیک بزنید)</th><th>قیمت</th><th>قیمت قبلی</th><th>موجودی</th><th>غیرفعال</th><th>حذف</th></tr>
+            <tr><td><input value="مشکی"></td><td><input dir="ltr" value="TBL-MOON-BLK"></td><td><input type="color" value="#1a1a1a"><label class="chk nocol"><input type="checkbox"> بدون رنگ</label></td><td><input value="۱,۴۵۰,۰۰۰"></td><td><input value="۱,۶۹۰,۰۰۰"></td><td><input value="۲"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr><td><input value="طلایی"></td><td><input dir="ltr" value="TBL-MOON-GLD"></td><td><input type="color" value="#c9a15a"><label class="chk nocol"><input type="checkbox"> بدون رنگ</label></td><td><input value="۱,۵۵۰,۰۰۰"></td><td><input value=""></td><td><input value="۰"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+          </table>
+          <button class="btn ghost" type="button">+ افزودن گزینه</button>
+        </div>
+        <div class="card">
+          <h2>تصاویر</h2>
+          <p class="mut">JPG، PNG یا WebP تا ۵ مگابایت؛ به‌صورت خودکار بهینه می‌شوند. تصویر اول، تصویر اصلی است (کوچک‌ترین عدد ترتیب). متن جایگزین را برای سئو و دسترس‌پذیری پر کنید.</p>
+          <div class="imgs">
+            <div class="imgrow"><span class="thumb" style="display:inline-block;width:70px;height:70px"></span><input value="تابلو دکوراتیو طرح ماه، رنگ مشکی" placeholder="متن جایگزین"><input class="s" value="۱" title="ترتیب"><select><option>همه گزینه‌ها</option><option selected>مشکی</option><option>طلایی</option></select><label class="chk"><input type="checkbox"> حذف</label></div>
+            <div class="imgrow"><span class="thumb" style="display:inline-block;width:70px;height:70px"></span><input value="نمای نزدیک تابلو ماه روی دیوار پذیرایی" placeholder="متن جایگزین"><input class="s" value="۲" title="ترتیب"><select><option selected>همه گزینه‌ها</option><option>مشکی</option><option>طلایی</option></select><label class="chk"><input type="checkbox"> حذف</label></div>
+          </div>
+          <div class="newimgs"></div>
+          <button class="btn ghost" type="button">+ افزودن عکس</button>
+          <p class="mut">با موبایل هم می‌توانید هر بار یک عکس اضافه کنید و پیش‌نمایشش را همین‌جا ببینید؛ لازم نیست همه را یک‌جا انتخاب کنید.</p>
+        </div>
+        <div class="card stack">
+          <label>توضیح کوتاه<input value="تابلو دکوراتیو فلزی طرح ماه، مناسب دیوار پذیرایی و اتاق خواب"></label>
+          <label>توضیحات کامل محصول (با نوار ابزار بالای کادر می‌توانید تیتر، پررنگ، لینک، فهرست و تصویر بگذارید)
+            <div class="rte"><div class="rte-bar"><button class="rte-b" type="button">B</button><button class="rte-b" type="button">I</button><button class="rte-b" type="button">لینک</button><button class="rte-b" type="button">فهرست</button><button class="rte-b" type="button">تصویر</button></div><div class="rte-area" contenteditable="false">تابلوی فلزی برش‌خورده با روکش ضدزنگ، مناسب فضای داخلی. رنگ مشکی مات و طلایی موجود است. ابعاد ۴۰×۴۰ سانتی‌متر.</div></div>
+          </label>
+          <div class="specbox">
+            <b>مشخصات فنی</b>
+            <p class="mut">هر ردیف یک مشخصه است؛ عنوان را در کادر اول و مقدارش را در کادر دوم بنویسید (مثلاً «جنس» ← «چوب راش»). ردیف خالی نمایش داده نمی‌شود.</p>
+            <div>
+              <div class="specrow"><input value="جنس"><input value="فلز با روکش ضدزنگ"></div>
+              <div class="specrow"><input value="ابعاد"><input value="۴۰ × ۴۰ سانتی‌متر"></div>
+              <div class="specrow"><input value="وزن"><input value="تقریباً ۸۰۰ گرم"></div>
+            </div>
+            <button class="btn ghost" type="button">+ افزودن مشخصه</button>
+          </div>
+        </div>
+        <div class="card stack">
+          <h2>فیلد سفارشی (اختیاری)</h2>
+          <div class="cfhelp">
+            <p><b>این بخش چیست؟</b> یک کادر متنیِ اضافه در صفحهٔ همین محصول که خریدار قبل از افزودن به سبد پر می‌کند؛ مثلاً «نام روی مجسمه» یا «متن حکاکی». مقدارِ واردشده همراه سفارش برای شما نمایش داده می‌شود.</p>
+            <p><b>چطور پر کنم؟</b> فقط «عنوان» را بنویسید تا فعال شود (خالی = فیلد وجود ندارد). بقیهٔ گزینه‌ها اختیاری‌اند:</p>
+            <ul><li><b>راهنما زیر فیلد:</b> جملهٔ کوچکی زیر کادر که به خریدار می‌گوید چه بنویسد.</li><li><b>نوع نویسهٔ مجاز:</b> مثلاً «فقط انگلیسی» یعنی فارسی و عدد پذیرفته نمی‌شود.</li><li><b>حداقل/حداکثر طول:</b> تعداد حروف مجاز (مثلاً ۲ تا ۲۰).</li><li><b>الزامی:</b> بدون پر کردنش خریدار نمی‌تواند به سبد اضافه کند.</li></ul>
+            <p class="mut">قوانین سمت سرور هم دوباره بررسی می‌شود. تا ۳ فیلد می‌توانید بسازید.</p>
+          </div>
+          <div class="grid3 cfrow">
+            <label>عنوان فیلد — همان چیزی که خریدار می‌بیند (مثلاً نام روی مجسمه)<input value=""></label>
+            <label>راهنما زیر فیلد<input placeholder="مثلاً: فقط حروف انگلیسی"></label>
+            <label>نوع نویسه مجاز<select><option>همه نویسه‌ها</option><option>فقط انگلیسی</option><option>فقط عدد</option></select></label>
+            <label>حداقل طول<input value="۰"></label>
+            <label>حداکثر طول (تا ۲۰۰)<input value="۵۰"></label>
+            <label class="chk"><input type="checkbox"> الزامی</label>
+          </div>
+          <button class="btn ghost" type="button">+ افزودن فیلد سفارشی</button>
+        </div>
+        <div class="card stack">
+          <h2>محصولات مرتبط (اختیاری)</h2>
+          <p class="mut">اگر چیزی انتخاب نشود، محصولات هم‌دسته نمایش داده می‌شوند.</p>
+          <div class="relbar"><input type="search" placeholder="جستجوی نام محصول..." autocomplete="off"><label class="chk"><input type="checkbox"> انتخاب همه</label></div>
+          <div class="relgrid">
+            <label class="relitem"><input type="checkbox" checked><span class="thumb" style="display:inline-block;width:44px;height:44px;border-radius:6px"></span><span>آینه دکوراتیو گرد</span></label>
+            <label class="relitem"><input type="checkbox"><span class="thumb" style="display:inline-block;width:44px;height:44px;border-radius:6px"></span><span>ساعت دیواری مینیمال</span></label>
+            <label class="relitem"><input type="checkbox" checked><span class="thumb" style="display:inline-block;width:44px;height:44px;border-radius:6px"></span><span>شمعدان فلزی طرح برگ</span></label>
+            <label class="relitem"><input type="checkbox"><span class="thumb" style="display:inline-block;width:44px;height:44px;border-radius:6px"></span><span>ست دکوری سه‌تکه</span></label>
+          </div>
+        </div>
+        <div class="card grid2">
+          <h2 class="full">سئو</h2>
+          <label>عنوان صفحه (خالی = نام محصول)<input value=""></label>
+          <label>توضیح متا<input value="تابلو دکوراتیو فلزی طرح ماه"></label>
+          <label class="chk"><input type="checkbox"> عدم نمایش در موتورهای جست‌وجو</label>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره محصول</button><a class="btn ghost" href="#" data-view="products">بازگشت</a></div>
+      </form>
+    </section>
+
+    <!-- ===================== ورود/خروج CSV محصولات ===================== -->
+    <section class="view" id="view-products_import">
+      <h1>ورود و خروج گروهی محصولات (CSV)</h1>
+      <div class="card stack"><h2>دریافت محصولات فعلی</h2><p class="mut">فایل CSV همهٔ محصولات برای ویرایش در اکسل. بهترین راه برای ساخت فایل نمونه همین است.</p><p><a class="btn" href="#">دریافت CSV محصولات</a></p></div>
+      <form class="card stack" onsubmit="return false">
+        <h2>ورود از فایل CSV</h2>
+        <p class="mut">ستون‌ها (ردیف اول): <code dir="ltr">name, sku, category, type, price, old_price, stock, status, short_desc, description</code>. ستون <b>name</b> لازم است.<br>• اگر <b>sku</b> با یک محصول موجود یکی باشد، همان محصول به‌روز می‌شود؛ وگرنه محصول جدید ساخته می‌شود (محصول بدون sku همیشه جدید است).<br>• دسته‌ای که وجود ندارد ساخته می‌شود. محصول جدید «ساده» است؛ محصول دارای رنگ/گزینه از اینجا فقط نام و توضیحش تغییر می‌کند.<br>• تصاویر از اینجا وارد نمی‌شوند؛ بعداً در ویرایش هر محصول بگذارید.<br>• فایل با کدگذاری UTF-8 ذخیره شود (در اکسل: «CSV UTF-8»). حداکثر ۲۰۰۰ ردیف.<br>• <b>قبل از ورود، از «دریافت CSV» و بکاپ دیتابیس نسخهٔ پشتیبان بگیرید.</b></p>
+        <label>فایل CSV<input type="file" accept=".csv,text/csv"></label>
+        <div class="bar"><button class="btn" type="submit">ورود محصولات</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== دسته‌بندی‌ها (فهرست) ===================== -->
+    <section class="view" id="view-categories">
+      <h1>دسته‌بندی‌ها</h1>
+      <p><a class="btn" href="#" data-view="category_form">+ دسته‌بندی جدید</a></p>
+      <div class="card scroll">
+        <table><tr><th>نام</th><th>محصولات</th><th>وضعیت</th><th></th></tr>
+          <tr><td>تابلو و دکوری دیواری <small class="mut" dir="ltr">wall-decor</small></td><td>۲۲</td><td>فعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>دکوری میز و شلف <small class="mut" dir="ltr">tabletop</small></td><td>۱۸</td><td>فعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>چراغ و نورپردازی <small class="mut" dir="ltr">lighting</small></td><td>۱۴</td><td>فعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>↳ آباژور و چراغ‌خواب <small class="mut" dir="ltr">bedside-lamps</small></td><td>۶</td><td>فعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>هدایای خاص <small class="mut" dir="ltr">gifts</small></td><td>۹</td><td>فعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td>ست‌های دکوراتیو <small class="mut" dir="ltr">sets</small></td><td>۷</td><td>غیرفعال</td><td class="act"><a href="#" data-view="category_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== دسته‌بندی (فرم) ===================== -->
+    <section class="view" id="view-category_form">
+      <h1>ویرایش دسته‌بندی: تابلو و دکوری دیواری</h1>
+      <p><a class="btn ghost" href="#" data-view="categories">← بازگشت به فهرست</a></p>
+      <form class="card stack" onsubmit="return false">
+        <h2>ویرایش دسته‌بندی</h2>
+        <label>نام<input value="تابلو و دکوری دیواری"></label>
+        <label>نشانی (slug) — خالی = خودکار<input dir="ltr" value="wall-decor"></label>
+        <label>والد (برای زیردسته)<select><option selected>— دسته اصلی —</option><option>دکوری میز و شلف</option><option>چراغ و نورپردازی</option></select></label>
+        <label>توضیح<textarea rows="3">مجموعه‌ای از تابلوها و دکورهای دیواری برای پذیرایی، اتاق خواب و راهرو.</textarea></label>
+        <label>تصویر<input type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <label>متن جایگزین تصویر <small class="mut">(توضیح کوتاه عکس؛ برای سئو و نابینایان)</small><input placeholder="مثلاً: مجسمهٔ چوبی راش" value="قفسهٔ نمایش تابلوهای دیواری فروشگاه"></label>
+        <label class="chk"><input type="checkbox" checked> حذف تصویر فعلی</label>
+        <label>عنوان سئو<input value=""></label>
+        <label>توضیح متا<input value=""></label>
+        <label>ترتیب نمایش<input value="۱"></label>
+        <label class="chk"><input type="checkbox" checked> فعال</label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button><a class="btn ghost" href="#" data-view="category_form">دسته جدید</a></div>
+      </form>
+    </section>
+
+    <!-- ===================== موجودی ===================== -->
+    <section class="view" id="view-stock">
+      <h1>موجودی</h1>
+      <p class="mut">عدد جدید را وارد و «ذخیره» را بزنید. موجودی کمتر از ۳ با رنگ هشدار نمایش داده می‌شود.</p>
+      <form onsubmit="return false">
+        <div class="card scroll">
+          <table><tr><th>محصول</th><th>گزینه</th><th>موجودی</th></tr>
+            <tr><td>تابلو دکوراتیو ماه</td><td>مشکی</td><td><input class="s warn" value="۲"></td></tr>
+            <tr><td>تابلو دکوراتیو ماه</td><td>طلایی</td><td><input class="s warn" value="۰"></td></tr>
+            <tr><td>گلدان سرامیکی کوچک</td><td>—</td><td><input class="s warn" value="۱"></td></tr>
+            <tr><td>چراغ‌خواب چوبی</td><td>—</td><td><input class="s warn" value="۳"></td></tr>
+            <tr><td>ست دکوری سه‌تکه</td><td>—</td><td><input class="s warn" value="۰"></td></tr>
+            <tr><td>آینه دکوراتیو گرد</td><td>قطر ۳۰ سانتی‌متر</td><td><input class="s" value="۷"></td></tr>
+            <tr><td>آینه دکوراتیو گرد</td><td>قطر ۵۰ سانتی‌متر</td><td><input class="s" value="۴"></td></tr>
+            <tr><td>شمعدان فلزی طرح برگ</td><td>—</td><td><input class="s" value="۱۲"></td></tr>
+          </table>
+        </div>
+        <button class="btn" type="submit">ذخیره موجودی</button>
+      </form>
+    </section>
+
+    <!-- ===================== نظرات و پرسش‌ها ===================== -->
+    <section class="view" id="view-reviews">
+      <h1>نظرات و پرسش‌ها</h1>
+      <form class="card stack" onsubmit="return false">
+        <label class="chk"><input type="checkbox" checked> ثبت نظر و امتیاز در صفحهٔ محصول فعال باشد</label>
+        <label class="chk"><input type="checkbox" checked> پرسش و پاسخ در صفحهٔ محصول فعال باشد</label>
+        <p class="mut"><b>قاعده:</b> «نظر» فقط برای کاربر ثبت‌نام‌کرده‌ای است که همین محصول را خریده (سیستم از روی شماره موبایل/حساب او تشخیص می‌دهد). «پرسش» برای همه بدون ثبت‌نام باز است، به‌جز کسی که همین محصول را خریده. هر نظر یا پرسش ابتدا «در انتظار» است؛ با تأیید یا پاسخ شما منتشر می‌شود.</p>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <div class="tabsbar">
+        <a class="on" href="#">نظرها <span class="chip warn">۲ در انتظار</span></a>
+        <a href="#">پرسش‌ها <span class="chip warn">۱ در انتظار</span></a>
+      </div>
+      <div class="tabsbar">
+        <a class="on" href="#">در انتظار <span class="chip">۲</span></a>
+        <a href="#">منتشرشده <span class="chip">۵۸</span></a>
+        <a href="#">ردشده <span class="chip">۳</span></a>
+        <a href="#">همه</a>
+      </div>
+      <div class="card rv">
+        <div class="rvh"><span class="stars" aria-label="۵ از ۵">★★★★★</span> <b>سارا م.</b> <span class="chip ok">خریدار</span> <span class="chip">در انتظار</span>
+          <small class="mut">۱۴۰۵/۰۸/۲۷ — <a href="#" target="_blank" rel="noopener">تابلو دکوراتیو ماه</a></small></div>
+        <p class="rvb">کیفیت عالی، بسته‌بندی خیلی خوب بود. حتماً دوباره خرید می‌کنم.</p>
+        <div class="rvact">
+          <form onsubmit="return false"><button class="btn" type="submit">تأیید و انتشار</button></form>
+          <form onsubmit="return false"><button class="btn ghost" type="submit">رد</button></form>
+          <form onsubmit="return false"><button class="btn ghost danger" type="submit">حذف</button></form>
+        </div>
+        <form class="rvreply" onsubmit="return false"><label>پاسخ فروشگاه (اختیاری؛ زیر نظر نمایش داده می‌شود)<input placeholder=""></label><button class="btn ghost" type="submit">ذخیره پاسخ</button></form>
+      </div>
+      <div class="card rv">
+        <div class="rvh"><span class="stars" aria-label="۴ از ۵">★★★★☆</span> <b>علی ر.</b> <span class="chip ok">خریدار</span> <span class="chip">در انتظار</span>
+          <small class="mut">۱۴۰۵/۰۸/۲۵ — <a href="#" target="_blank" rel="noopener">گلدان سرامیکی کوچک</a></small></div>
+        <p class="rvb">رنگش کمی با عکس فرق داشت ولی در کل راضی‌ام.</p>
+        <div class="rvact">
+          <form onsubmit="return false"><button class="btn" type="submit">تأیید و انتشار</button></form>
+          <form onsubmit="return false"><button class="btn ghost" type="submit">رد</button></form>
+          <form onsubmit="return false"><button class="btn ghost danger" type="submit">حذف</button></form>
+        </div>
+        <form class="rvreply" onsubmit="return false"><label>پاسخ فروشگاه (اختیاری؛ زیر نظر نمایش داده می‌شود)<input placeholder=""></label><button class="btn ghost" type="submit">ذخیره پاسخ</button></form>
+      </div>
+    </section>
+
+    <!-- ===================== مقاله‌ها ===================== -->
+    <section class="view" id="view-articles">
+      <h1>مقاله‌ها <a class="btn" href="#" data-view="article_form">+ مقاله جدید</a></h1>
+      <form class="card inline" onsubmit="return false"><label class="chk"><input type="checkbox" checked> بخش «مقالات» در سایت نمایش داده شود</label><button class="btn ghost" type="submit">ذخیره</button></form>
+      <div class="card scroll">
+        <table><tr><th>عنوان</th><th>وضعیت</th><th>تاریخ انتشار</th><th></th></tr>
+          <tr><td><a href="#" data-view="article_form">۵ ایده برای دکور دیوار پذیرایی</a></td><td>منتشرشده</td><td>۱۴۰۵/۰۸/۱۸</td><td><a href="#" target="_blank" rel="noopener">مشاهده</a> <button class="btn ghost" type="button">حذف</button></td></tr>
+          <tr><td><a href="#" data-view="article_form">راهنمای انتخاب گلدان مناسب</a></td><td>منتشرشده</td><td>۱۴۰۵/۰۸/۱۰</td><td><a href="#" target="_blank" rel="noopener">مشاهده</a> <button class="btn ghost" type="button">حذف</button></td></tr>
+          <tr><td><a href="#" data-view="article_form">۷ ترفند نورپردازی خانه با نور گرم</a></td><td>پیش‌نویس</td><td>—</td><td><a href="#" target="_blank" rel="noopener">مشاهده</a> <button class="btn ghost" type="button">حذف</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== مقاله (فرم) ===================== -->
+    <section class="view" id="view-article_form">
+      <h1>ویرایش: ۵ ایده برای دکور دیوار پذیرایی</h1>
+      <form class="stack" onsubmit="return false">
+        <div class="card grid2">
+          <label class="full">عنوان<input value="۵ ایده برای دکور دیوار پذیرایی"></label>
+          <label>نشانی (slug) — خالی = خودکار<input dir="ltr" value="5-wall-decor-ideas"></label>
+          <label>وضعیت<select><option selected>منتشرشده</option><option>پیش‌نویس (نمایش داده نمی‌شود)</option></select></label>
+          <label>تاریخ انتشار (اختیاری، مثل 2026-10-29 10:30)<input dir="ltr" value="2026-11-09T10:30" placeholder="خالی = همین الان"></label>
+          <label class="full">خلاصه (در فهرست مقالات نمایش داده می‌شود)<input value="چند ایدهٔ ساده و کم‌هزینه برای دکور دیوار پذیرایی با تابلو و آینه."></label>
+        </div>
+        <div class="card stack">
+          <label>متن مقاله (با نوار ابزار بالای کادر می‌توانید تیتر، اندازه، پررنگ، لینک، فهرست و تصویر بگذارید)
+            <div class="rte"><div class="rte-bar"><button class="rte-b" type="button">B</button><button class="rte-b" type="button">I</button><button class="rte-b" type="button">تیتر</button><button class="rte-b" type="button">لینک</button><button class="rte-b" type="button">فهرست</button><button class="rte-b" type="button">تصویر</button></div><div class="rte-area" contenteditable="false"><h2>۱. تابلوی قابی بزرگ</h2><p>یک تابلوی بزرگ روی دیوار اصلی پذیرایی، نقطهٔ کانونی اتاق را می‌سازد.</p><h2>۲. ترکیب آینه و نور</h2><p>آینهٔ گرد کنار یک چراغ دیواری، نور را در فضا پخش می‌کند.</p></div></div>
+          </label>
+        </div>
+        <div class="card stack">
+          <h2>تصویر شاخص</h2>
+          <span class="thumb" style="display:inline-block;width:160px;height:90px;border-radius:8px"></span>
+          <label class="chk"><input type="checkbox"> حذف تصویر فعلی</label>
+          <label>متن جایگزین تصویر <small class="mut">(توضیح کوتاه عکس؛ برای سئو و نابینایان)</small><input value="دیوار پذیرایی با تابلوی دکوراتیو و آینهٔ گرد"></label>
+          <label>بارگذاری تصویر (JPG، PNG یا WebP تا ۵ مگابایت)<input type="file" accept="image/jpeg,image/png,image/webp"></label>
+        </div>
+        <div class="card grid2">
+          <h2 class="full">سئو</h2>
+          <label>عنوان صفحه (خالی = عنوان مقاله)<input value=""></label>
+          <label>توضیح متا<input value=""></label>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره مقاله</button><a class="btn ghost" href="#" data-view="articles">بازگشت</a></div>
+      </form>
+    </section>
+
+    <!-- ===================== صفحات ===================== -->
+    <section class="view" id="view-pages">
+      <h1>صفحات</h1>
+      <p class="mut">متن اولیه قوانین و سیاست‌ها نمونه است و باید پیش از راه‌اندازی توسط شما یا مشاور حقوقی‌تان جایگزین شود.</p>
+      <p><a class="btn" href="#" data-view="page_form">+ صفحهٔ جدید</a></p>
+      <div class="card scroll">
+        <table><tr><th>عنوان</th><th>نشانی</th><th>وضعیت</th><th>آخرین ویرایش</th><th></th></tr>
+          <tr><td>درباره ما</td><td dir="ltr">/page/about</td><td>منتشر</td><td>۱۴۰۵/۰۶/۰۲</td><td><a href="#" data-view="page_form">ویرایش</a></td></tr>
+          <tr><td>قوانین و مقررات <span class="pill s-payment_review">متن نمونه</span></td><td dir="ltr">/page/terms</td><td>منتشر</td><td>۱۴۰۵/۰۱/۱۰</td><td><a href="#" data-view="page_form">ویرایش</a></td></tr>
+          <tr><td>حریم خصوصی <span class="pill s-payment_review">متن نمونه</span></td><td dir="ltr">/page/privacy</td><td>منتشر</td><td>۱۴۰۵/۰۱/۱۰</td><td><a href="#" data-view="page_form">ویرایش</a></td></tr>
+          <tr><td>راهنمای اندازه‌ها</td><td dir="ltr">/page/size-guide</td><td>مخفی</td><td>۱۴۰۵/۰۵/۲۰</td><td><a href="#" data-view="page_form">ویرایش</a></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== صفحه (فرم) ===================== -->
+    <section class="view" id="view-page_form">
+      <h1>ویرایش صفحه: درباره ما</h1>
+      <form class="card stack" onsubmit="return false">
+        <label>عنوان<input value="درباره ما"></label>
+        <label>متن صفحه (با نوار ابزار بالای کادر می‌توانید تیتر، پررنگ، لینک، فهرست و تصویر بگذارید)
+          <div class="rte"><div class="rte-bar"><button class="rte-b" type="button">B</button><button class="rte-b" type="button">I</button><button class="rte-b" type="button">لینک</button><button class="rte-b" type="button">فهرست</button></div><div class="rte-area" contenteditable="false"><p>این فروشگاه اینترنتی از سال ۱۴۰۲ با هدف ارائهٔ دکوری‌های دست‌ساز و باکیفیت برای خانهٔ ایرانی فعالیت می‌کند.</p></div></div>
+        </label>
+        <label>عنوان سئو<input value=""></label>
+        <label>توضیح متا<input value=""></label>
+        <label class="chk"><input type="checkbox" checked> منتشر شود</label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button><a class="btn ghost" href="#" data-view="pages">بازگشت</a></div>
+      </form>
+      <form onsubmit="return false"><button class="btn ghost danger" type="submit">حذف این صفحه</button></form>
+    </section>
+
+    <!-- ===================== بنرها (فهرست) ===================== -->
+    <section class="view" id="view-banners">
+      <h1>بنرها</h1>
+      <p class="mut">«اسلایدر» بنرهای بزرگ بالای صفحه اصلی و «تبلیغاتی» دو بنر کنار هم میانه صفحه (حداکثر دو بنر اول نمایش داده می‌شود). تصاویر نمونه نمایش داده نمی‌شوند؛ تصویر خودتان را بارگذاری کنید.</p>
+      <p><a class="btn" href="#" data-view="banner_form">+ بنر جدید</a></p>
+      <div class="card scroll">
+        <table><tr><th></th><th>عنوان</th><th>جایگاه</th><th>وضعیت</th><th></th></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td>تخفیف پاییزه تابلوها</td><td>اسلایدر</td><td>فعال</td><td class="act"><a href="#" data-view="banner_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td>مجموعهٔ جدید چراغ‌خواب</td><td>تبلیغاتی</td><td>فعال</td><td class="act"><a href="#" data-view="banner_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+          <tr><td><span class="thumb" style="display:inline-block;width:44px;height:44px"></span></td><td>ارسال رایگان بالای ۱.۵ میلیون</td><td>عریض</td><td>غیرفعال</td><td class="act"><a href="#" data-view="banner_form">ویرایش</a><button class="link danger" type="button">حذف</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== بنر (فرم) ===================== -->
+    <section class="view" id="view-banner_form">
+      <h1>ویرایش بنر: تخفیف پاییزه تابلوها</h1>
+      <p><a class="btn ghost" href="#" data-view="banners">← بازگشت به فهرست</a></p>
+      <form class="card stack" onsubmit="return false">
+        <h2>ویرایش بنر</h2>
+        <label>عنوان<input value="تخفیف پاییزه تابلوها"></label>
+        <label>زیرعنوان<input value="تا ۲۰٪ تخفیف روی تابلوهای دیواری منتخب"></label>
+        <label>لینک (با / یا https:// شروع شود)<input dir="ltr" value="/category/wall-decor"></label>
+        <label>متن دکمه<input value="مشاهده و خرید"></label>
+        <label>جایگاه<select><option selected>اسلایدر اصلی</option><option>تبلیغاتی (دوتایی)</option><option>عریض (تمام‌صفحه، وسط صفحه اصلی)</option></select></label>
+        <label>تم رنگی (فقط اسلایدر)<select><option selected>روشن</option><option>تیره</option></select></label>
+        <label>تصویر<input type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <label>متن جایگزین تصویر <small class="mut">(توضیح کوتاه عکس؛ برای سئو و نابینایان)</small><input value="تابلوهای دیواری با تخفیف پاییزه"></label>
+        <label class="chk"><input type="checkbox"> حذف تصویر فعلی</label>
+        <label>ترتیب<input value="۱"></label>
+        <label class="chk"><input type="checkbox" checked> فعال</label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== منوها و فوتر ===================== -->
+    <section class="view" id="view-menus">
+      <h1>منوها و فوتر</h1>
+      <form class="stack" onsubmit="return false">
+        <div class="card"><p class="mut">هر ردیف یک لینک است: عنوان + آدرس. آدرس داخلی با / شروع می‌شود (مثل <code dir="ltr">/page/about</code> یا <code dir="ltr">/products</code>) و آدرس بیرونی با https://. ردیف خالی نادیده گرفته می‌شود. اگر همهٔ ردیف‌های یک منو را خالی کنید، منوی پیش‌فرض نمایش داده می‌شود.</p></div>
+        <div class="card grid3"><h2 class="full">عنوان ستون‌های فوتر</h2>
+          <label>ستون اول<input value="خدمات مشتریان"></label>
+          <label>ستون دوم<input value="دسترسی سریع"></label>
+          <label>ستون تماس<input value="اطلاعات تماس"></label>
+        </div>
+        <div class="card scroll"><h2>منوی بالای سایت</h2>
+          <table><tr><th>عنوان</th><th>آدرس</th></tr>
+            <tr><td><input value="محصولات"></td><td><input dir="ltr" value="/products"></td></tr>
+            <tr><td><input value="مقالات"></td><td><input dir="ltr" value="/articles"></td></tr>
+            <tr><td><input value="درباره ما"></td><td><input dir="ltr" value="/page/about"></td></tr>
+            <tr><td><input value="تماس با ما"></td><td><input dir="ltr" value="/page/contact"></td></tr>
+          </table>
+        </div>
+        <div class="card scroll"><h2>ستون اول فوتر</h2>
+          <table><tr><th>عنوان</th><th>آدرس</th></tr>
+            <tr><td><input value="قوانین و مقررات"></td><td><input dir="ltr" value="/page/terms"></td></tr>
+            <tr><td><input value="حریم خصوصی"></td><td><input dir="ltr" value="/page/privacy"></td></tr>
+            <tr><td><input value="پیگیری سفارش"></td><td><input dir="ltr" value="/track"></td></tr>
+          </table>
+        </div>
+        <div class="card scroll"><h2>ستون دوم فوتر</h2>
+          <table><tr><th>عنوان</th><th>آدرس</th></tr>
+            <tr><td><input value="دسته‌بندی‌ها"></td><td><input dir="ltr" value="/products"></td></tr>
+            <tr><td><input value=""></td><td><input dir="ltr" value=""></td></tr>
+          </table>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره منوها</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== ظاهر و چیدمان ===================== -->
+    <section class="view" id="view-appearance">
+      <h1>ظاهر فروشگاه</h1>
+      <form class="stack" onsubmit="return false">
+        <div class="card grid2">
+          <h2 class="full">برند</h2>
+          <label>نام فروشگاه<input value="فروشگاه اینترنتی"></label>
+          <label>شعار زیر نام<input value="دکور خانهٔ شما، سلیقهٔ ما"></label>
+          <label>لوگو (PNG/WebP/JPG) <span class="thumb" style="display:inline-block;width:80px;height:40px"></span><input type="file" accept="image/jpeg,image/png,image/webp"><span class="chk"><input type="checkbox"> حذف لوگو (نمایش نام متنی)</span></label>
+          <label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value="لوگوی فروشگاه"></label>
+          <label>فاوآیکون (تصویر مربع) <span class="thumb" style="display:inline-block;width:32px;height:32px"></span><input type="file" accept="image/jpeg,image/png,image/webp"><span class="chk"><input type="checkbox"> حذف</span></label>
+          <label>رنگ اصلی<input type="color" id="brandColor" value="#A6512C"></label>
+          <label>رنگ مکمل<input type="color" value="#25865A"></label>
+        </div>
+        <div class="card stack">
+          <h2>نوار اطلاع‌رسانی بالای سایت</h2>
+          <label class="chk"><input type="checkbox" checked> نمایش داده شود</label>
+          <p class="mut">تا ۳ پیام می‌توانید بنویسید؛ اگر بیشتر از یکی پر باشد، به‌صورت خودکار (هر ۴ ثانیه) چرخشی نمایش داده می‌شوند. پیام‌های خالی نادیده گرفته می‌شوند.</p>
+          <label>پیام ۱<input value="ارسال فوری محصولات موجود"></label>
+          <label>لینک پیام ۱ (اختیاری؛ با / یا https:// شروع شود)<input dir="ltr" value="/products"></label>
+          <label>پیام ۲ (اختیاری)<input value="ساخت دست‌ساز با کیفیت (زمان ساخت سفارشی تا ۶ روز)"></label>
+          <label>لینک پیام ۲<input dir="ltr" value=""></label>
+          <label>پیام ۳ (اختیاری)<input value=""></label>
+          <label>لینک پیام ۳<input dir="ltr" value=""></label>
+        </div>
+        <div class="card">
+          <h2>بخش‌های صفحه اصلی</h2>
+          <p class="mut">عدد کوچک‌تر = بالاتر. بخش‌های بدون محتوا (مثلاً بنر ثبت‌نشده) خودکار نمایش داده نمی‌شوند.</p>
+          <table><tr><th>بخش</th><th>نمایش</th><th>ترتیب</th></tr>
+            <tr><td>اسلایدر بنر اصلی</td><td><input type="checkbox" checked></td><td><input class="s" value="۱۰"></td></tr>
+            <tr><td>نوار مزایای فروشگاه</td><td><input type="checkbox" checked></td><td><input class="s" value="۲۰"></td></tr>
+            <tr><td>دسته‌بندی‌ها</td><td><input type="checkbox" checked></td><td><input class="s" value="۳۰"></td></tr>
+            <tr><td>محصولات ویژه</td><td><input type="checkbox" checked></td><td><input class="s" value="۴۰"></td></tr>
+            <tr><td>بنرهای تبلیغاتی</td><td><input type="checkbox" checked></td><td><input class="s" value="۵۰"></td></tr>
+            <tr><td>پرفروش‌ترین‌ها</td><td><input type="checkbox" checked></td><td><input class="s" value="۶۰"></td></tr>
+            <tr><td>نظرات مشتریان</td><td><input type="checkbox" checked></td><td><input class="s" value="۷۰"></td></tr>
+            <tr><td>آخرین مقاله‌ها</td><td><input type="checkbox"></td><td><input class="s" value="۸۰"></td></tr>
+          </table>
+        </div>
+        <div class="card stack"><h2>فوتر</h2><label>متن معرفی کوتاه<textarea rows="3">فروشگاه اینترنتی دکور و اکسسوری خانه با طراحی ایرانی و ساخت باکیفیت.</textarea></label><p class="mut">اطلاعات تماس و شبکه‌های اجتماعی از بخش «تماس و پیام‌ها» ویرایش می‌شود.</p></div>
+        <div class="card stack">
+          <h2>بخش اعتماد / روش‌های پرداخت (اختیاری)</h2>
+          <div class="flash">فقط نشان‌ها و مجوزهایی را نمایش دهید که واقعاً دارید (مثلاً نماد اعتماد الکترونیکی با مجوز معتبر). این سایت هیچ نشان پیش‌فرضی نمایش نمی‌دهد.</div>
+          <label class="chk"><input type="checkbox"> نمایش در فوتر</label>
+          <label>عنوان<input value=""></label>
+          <label>متن<input value=""></label>
+          <label>تصویر (مثلاً تصویر نشان) <input type="file" accept="image/jpeg,image/png,image/webp"></label>
+          <label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value=""></label>
+        </div>
+        <div class="card stack"><h2>سئوی صفحه اصلی</h2><label>عنوان<input value="فروشگاه اینترنتی دکور و اکسسوری خانه"></label><label>توضیح متا<input value="تابلو، گلدان، چراغ‌خواب و ست‌های دکوراتیو با ارسال سریع."></label></div>
+        <div class="card stack">
+          <h2>رنگ‌ها و قالب‌های آماده</h2>
+          <p class="mut">یک قالب آماده را انتخاب کنید تا رنگ اصلی و مکمل پر شود (هنوز ذخیره نشده است؛ بعد از دیدن، «ذخیره» را بزنید).</p>
+          <div class="presets">
+            <button class="btn ghost" type="button" data-preset="#A6512C"><i style="background:#A6512C"></i><i style="background:#C97A4A"></i>خاکی‌رنگ (پیش‌فرض)</button>
+            <button class="btn ghost" type="button" data-preset="#176B45"><i style="background:#176B45"></i><i style="background:#25865A"></i>سبز</button>
+            <button class="btn ghost" type="button" data-preset="#1D5FD0"><i style="background:#1D5FD0"></i><i style="background:#3B82F6"></i>آبی</button>
+            <button class="btn ghost" type="button" data-preset="#C62828"><i style="background:#C62828"></i><i style="background:#E53935"></i>قرمز</button>
+            <button class="btn ghost" type="button" data-preset="#B83259"><i style="background:#B83259"></i><i style="background:#E0587C"></i>رز</button>
+            <button class="btn ghost" type="button" data-preset="#1A1A1A"><i style="background:#1A1A1A"></i><i style="background:#B8923B"></i>مشکی و طلایی</button>
+            <button class="btn ghost" type="button" data-preset="#C2570C"><i style="background:#C2570C"></i><i style="background:#F08A24"></i>نارنجی</button>
+            <button class="btn ghost" type="button" data-preset="#6B3FA0"><i style="background:#6B3FA0"></i><i style="background:#8E5CC8"></i>بنفش</button>
+            <button class="btn ghost" type="button" data-preset="#0F766E"><i style="background:#0F766E"></i><i style="background:#14B8A6"></i>فیروزه‌ای</button>
+          </div>
+          <div class="grid2">
+            <div><label>رنگ پس‌زمینهٔ فوتر<input type="color" value="#16241c"></label><label class="chk"><input type="checkbox" checked> رنگ پیش‌فرض قالب</label></div>
+            <div><label>رنگ نوار تیره بالای سایت<input type="color" value="#16241c"></label><label class="chk"><input type="checkbox" checked> رنگ پیش‌فرض قالب</label></div>
+            <div><label>رنگ نوار اطلاع‌رسانی<input type="color" value="#A6512C"></label><label class="chk"><input type="checkbox"> رنگ پیش‌فرض قالب</label></div>
+            <div><label>رنگ پس‌زمینهٔ سایت<input type="color" value="#F5F8F5"></label><label class="chk"><input type="checkbox" checked> رنگ پیش‌فرض قالب</label></div>
+          </div>
+        </div>
+        <div class="card grid3">
+          <h2 class="full">شکل و اندازه</h2>
+          <label>گردی گوشه‌ها (۰ تا ۲۴)<input value="۱۲"></label>
+          <label>اندازهٔ متن سایت (۱۳ تا ۱۸)<input value="۱۵"></label>
+          <label>بیشترین ارتفاع لوگو (۲۴ تا ۱۲۰)<input value="۴۰"></label>
+          <label>تعداد ستون محصولات در رایانه (۳ تا ۵)<input value="۴"></label>
+          <label class="chk"><input type="checkbox" checked> نوار تیرهٔ بالای سایت (نام فروشگاه و پیگیری سفارش) نمایش داده شود</label>
+        </div>
+        <div class="card stack"><h2>متن پایین سایت</h2><label>متن حق نشر (خالی = «© نام فروشگاه — تمامی حقوق محفوظ است.»)<input value=""></label><p class="mut">عنوان ستون‌ها و لینک‌های فوتر در صفحهٔ «منوها و فوتر» ویرایش می‌شود.</p></div>
+        <div class="card stack"><h2>CSS دلخواه (پیشرفته)</h2><p class="mut">برای کسانی که می‌خواهند ظاهر را دقیق‌تر تغییر دهند. نوشتن اشتباه می‌تواند ظاهر سایت را به‌هم بریزد؛ اگر خراب شد، کادر را خالی و ذخیره کنید. کد اسکریپت و بارگذاری از سایت‌های دیگر مجاز نیست.</p><label>CSS<textarea rows="6" dir="ltr" placeholder=".pcard{box-shadow:none}"></textarea></label></div>
+        <div class="bar"><button class="btn" type="submit">ذخیره تنظیمات</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== محتوای صفحه اصلی ===================== -->
+    <section class="view" id="view-home">
+      <h1>محتوای صفحه اصلی</h1>
+      <p class="mut">اینجا متن و محتوای بخش‌های صفحهٔ اصلی را می‌نویسید. روشن/خاموش کردن و ترتیب بخش‌ها در صفحهٔ «ظاهر و چیدمان» است. بخش‌هایی که خالی بمانند در سایت نمایش داده نمی‌شوند؛ هیچ متن یا ادعای آماده‌ای نمایش داده نمی‌شود.</p>
+      <form class="stack" onsubmit="return false">
+        <div class="card stack"><h2>مزایای فروشگاه</h2><p class="mut">مثال: «ارسال به سراسر کشور» / «پشتیبانی تلفنی». فقط چیزی بنویسید که واقعاً ارائه می‌دهید.</p>
+          <div class="grid3"><label>تیتر ۱<input value="ارسال سریع"></label><label>متن کوتاه<input value="ارسال به سراسر کشور طی ۲ تا ۴ روز کاری"></label><label>شکل<select><option selected>کامیون</option><option>چک‌مارک</option></select></label></div>
+          <div class="grid3"><label>تیتر ۲<input value="ضمانت اصالت کالا"></label><label>متن کوتاه<input value="تمامی محصولات اصل و دست‌ساز هستند"></label><label>شکل<select><option selected>مدال</option><option>چک‌مارک</option></select></label></div>
+          <div class="grid3"><label>تیتر ۳<input value="پشتیبانی تلفنی"></label><label>متن کوتاه<input value="پاسخگویی شنبه تا پنجشنبه، ۹ تا ۱۸"></label><label>شکل<select><option selected>تلفن</option><option>چک‌مارک</option></select></label></div>
+          <div class="grid3"><label>تیتر ۴<input value="بازگشت کالا"></label><label>متن کوتاه<input value="تا ۷ روز امکان مرجوعی کالای سالم"></label><label>شکل<select><option selected>چک‌مارک</option><option>مدال</option></select></label></div>
+        </div>
+        <div class="card stack"><h2>ردیف محصولات دسته‌ها</h2><p class="mut">تا ۳ دسته انتخاب کنید؛ برای هرکدام یک ردیف از جدیدترین محصولاتش در صفحه اصلی نمایش داده می‌شود.</p>
+          <div class="grid2"><label>دسته ۱<select><option selected>تابلو و دکوری دیواری</option><option>دکوری میز و شلف</option></select></label><label>عنوان ردیف (اختیاری)<input value="جدیدترین تابلوها"></label></div>
+          <div class="grid2"><label>دسته ۲<select><option>— نمایش داده نشود —</option><option selected>چراغ و نورپردازی</option></select></label><label>عنوان ردیف (اختیاری)<input value="نورپردازی خانه"></label></div>
+          <div class="grid2"><label>دسته ۳<select><option selected>— نمایش داده نشود —</option></select></label><label>عنوان ردیف (اختیاری)<input value=""></label></div>
+        </div>
+        <div class="card stack"><h2>پیگیری سفارش</h2>
+          <label class="chk"><input type="checkbox" checked> دکمهٔ «پیگیری سفارش» در بالای سایت، منوی پایین موبایل، فوتر، سبد خرید و صفحه‌های خطا نمایش داده شود</label>
+          <label>عنوان فرم سریع صفحهٔ اصلی<input value="پیگیری سفارش"></label><label>توضیح فرم<input value="شماره سفارش و موبایل را وارد کنید"></label>
+        </div>
+        <div class="card stack"><h2>کارت‌های اطلاعاتی</h2><p class="mut">مثلاً «درباره ما»، «نحوهٔ ارسال» یا «مجموعهٔ جدید». تا ۳ کارت؛ کارت بدون عنوان نمایش داده نمی‌شود.</p>
+          <label>عنوان بخش<input value="" placeholder="بدون عنوان"></label>
+          <div class="grid3"><label>عنوان کارت ۱<input value="ساخت دست‌ساز"></label><label>متن کوتاه<input value="هر قطعه با دقت و دست هنرمندان ایرانی ساخته می‌شود."></label><label>لینک (اختیاری)<input dir="ltr" value="/page/about"></label></div>
+          <label>عکس کارت ۱ <input type="file" accept="image/jpeg,image/png,image/webp"></label><label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value=""></label>
+          <div class="grid3"><label>عنوان کارت ۲<input value="مجموعهٔ تازه"></label><label>متن کوتاه<input value="هر فصل طرح‌های جدید اضافه می‌شود."></label><label>لینک (اختیاری)<input dir="ltr" value="/products"></label></div>
+          <label>عکس کارت ۲ <input type="file" accept="image/jpeg,image/png,image/webp"></label><label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value=""></label>
+          <div class="grid3"><label>عنوان کارت ۳<input value=""></label><label>متن کوتاه<input value=""></label><label>لینک (اختیاری)<input dir="ltr" value=""></label></div>
+          <label>عکس کارت ۳ <input type="file" accept="image/jpeg,image/png,image/webp"></label><label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value=""></label>
+        </div>
+        <div class="card stack"><h2>متن توضیحی بلند</h2><p class="mut">برای معرفی فروشگاه یا دسته‌ها و بهتر دیده‌شدن در گوگل. متن واقعی و مفید بنویسید.</p><label>عنوان<input value="دکور خانه با ما"></label><label>متن (هر خط جدید یک پاراگراف)<textarea rows="8">این فروشگاه اینترنتی مجموعه‌ای از تابلو، گلدان، چراغ‌خواب و ست‌های دکوراتیو را با کیفیت بالا و قیمت مناسب عرضه می‌کند.</textarea></label></div>
+        <div class="card stack"><h2>بلوک‌های HTML آزاد (پیشرفته)</h2><p class="mut">برای کسانی که HTML بلدند. فقط برچسب‌های ساده (عنوان، پاراگراف، لیست، لینک، تصویر از همین سایت یا https، جدول) پذیرفته می‌شود؛ اسکریپت، style و فرم حذف می‌شود. جای آن در «ظاهر و چیدمان» قابل جابه‌جایی است.</p><label>بلوک ۱<textarea rows="6" dir="ltr"></textarea></label><label>بلوک ۲<textarea rows="6" dir="ltr"></textarea></label></div>
+        <div class="card stack"><h2>نوار تماس</h2><p class="mut">تلفن، ایمیل و نشانی از صفحهٔ «تماس» برداشته می‌شود. ساعت کاری را اینجا بنویسید؛ خالی = نمایش داده نمی‌شود.</p><label>ساعت کاری<input value="شنبه تا پنجشنبه ۹ تا ۱۸" placeholder="مثلاً شنبه تا پنجشنبه ۹ تا ۱۸"></label></div>
+        <div class="card stack"><h2>نوار آمار</h2><p class="mut">مثلاً «۲۰۰۰ + / مشتری راضی». فقط عددهایی که واقعاً درست است را بنویسید؛ خالی = نمایش داده نمی‌شود.</p>
+          <div class="grid2"><label>عدد یا متن کوتاه ۱<input value="+۵۰۰۰"></label><label>توضیح زیر عدد<input value="مشتری راضی"></label></div>
+          <div class="grid2"><label>عدد یا متن کوتاه ۲<input value="+۸۴"></label><label>توضیح زیر عدد<input value="محصول متنوع"></label></div>
+          <div class="grid2"><label>عدد یا متن کوتاه ۳<input value="۴.۸"></label><label>توضیح زیر عدد<input value="امتیاز رضایت مشتریان"></label></div>
+          <div class="grid2"><label>عدد یا متن کوتاه ۴<input value=""></label><label>توضیح زیر عدد<input value=""></label></div>
+        </div>
+        <div class="card stack"><h2>مراحل خرید</h2><label>عنوان بخش<input value="مراحل خرید از فروشگاه"></label>
+          <div class="grid2"><label>عنوان مرحله ۱<input value="انتخاب محصول"></label><label>توضیح کوتاه<input value="از بین دسته‌های متنوع انتخاب کنید"></label></div>
+          <div class="grid2"><label>عنوان مرحله ۲<input value="ثبت سفارش"></label><label>توضیح کوتاه<input value="آدرس و روش ارسال را انتخاب کنید"></label></div>
+          <div class="grid2"><label>عنوان مرحله ۳<input value="پرداخت امن"></label><label>توضیح کوتاه<input value="از طریق درگاه زرین‌پال"></label></div>
+          <div class="grid2"><label>عنوان مرحله ۴<input value="ارسال و تحویل"></label><label>توضیح کوتاه<input value="بسته‌بندی مطمئن و ارسال سریع"></label></div>
+        </div>
+        <div class="card stack"><h2>لوگوی برندها / همکاران</h2><p class="mut">فقط لوگوی برندهایی را بگذارید که اجازهٔ استفاده‌اش را دارید. خالی = نمایش داده نمی‌شود.</p>
+          <label>عنوان بخش<input value="" placeholder="بدون عنوان"></label>
+          <div class="grid3"><label>لوگو ۱ <input type="file" accept="image/jpeg,image/png,image/webp"></label><label>نام برند<input value=""></label><label>لینک (اختیاری)<input dir="ltr" value=""></label></div>
+          <button class="btn ghost" type="button">+ افزودن لوگو</button>
+        </div>
+        <div class="card stack"><h2>پرسش‌های متداول صفحهٔ اصلی</h2><label>عنوان بخش<input value="پرسش‌های متداول" placeholder="پرسش‌های متداول"></label>
+          <label>پرسش ۱<input value="زمان ارسال سفارش چقدر است؟"></label><label>پاسخ<textarea rows="2">سفارش‌ها معمولاً طی ۱ تا ۲ روز کاری بسته‌بندی و تحویل پست می‌شوند.</textarea></label>
+          <label>پرسش ۲<input value="آیا امکان مرجوع کردن کالا هست؟"></label><label>پاسخ<textarea rows="2">بله، تا ۷ روز پس از تحویل در صورت سالم بودن کالا.</textarea></label>
+        </div>
+        <div class="card stack"><h2>معرفی فروشگاه</h2><label>عنوان<input value="دربارهٔ فروشگاه"></label><label>متن<textarea rows="5">این فروشگاه با تیمی از طراحان و صنعتگران، دکور و اکسسوری خانه تولید می‌کند.</textarea></label>
+          <label>عکس <input type="file" accept="image/jpeg,image/png,image/webp"></label><label>متن جایگزین تصویر <small class="mut">(برای سئو و نابینایان)</small><input value=""></label>
+          <div class="grid2"><label>نوشتهٔ دکمه<input value="بیشتر بدانید"></label><label>لینک دکمه<input dir="ltr" value="/page/about" placeholder="/page/about"></label></div>
+        </div>
+        <div class="card stack"><h2>بنر دعوت به اقدام</h2><label>تیتر<input value="هنوز دکور دلخواهت رو پیدا نکردی؟"></label><label>توضیح<input value="همین حالا مجموعهٔ کامل محصولات را ببین."></label>
+          <div class="grid2"><label>نوشتهٔ دکمه<input value="مشاهدهٔ محصولات"></label><label>لینک دکمه<input dir="ltr" value="/products" placeholder="/products"></label></div>
+        </div>
+        <div class="card grid2"><h2 class="full">عنوان بخش‌ها</h2>
+          <label>دسته‌بندی‌ها<input value="" placeholder="بدون عنوان"></label>
+          <label>محصولات ویژه<input value="محصولات ویژه" placeholder="محصولات ویژه"></label>
+          <label>پرفروش‌ها<input value="پرفروش‌ترین‌ها" placeholder="پرفروش‌ترین‌ها"></label>
+          <label>جدیدترین‌ها<input value="جدیدترین محصولات" placeholder="جدیدترین محصولات"></label>
+          <label>مقاله‌ها<input value="آخرین مقاله‌ها" placeholder="آخرین مقاله‌ها"></label>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button> <a class="btn ghost" href="#" data-view="appearance">ترتیب و نمایش بخش‌ها</a></div>
+      </form>
+    </section>
+
+    <!-- ===================== پشتیبانی شناور ===================== -->
+    <section class="view" id="view-support">
+      <h1>پشتیبانی شناور</h1>
+      <form class="stack" onsubmit="return false">
+        <div class="card stack">
+          <label class="chk"><input type="checkbox" checked> دایرهٔ پشتیبانی در سایت نمایش داده شود</label>
+          <div class="grid3">
+            <label>جای قرارگیری<select><option selected>پایین سمت راست</option><option>پایین سمت چپ</option></select></label>
+            <label>اندازه<select><option>کوچک (۴۰ پیکسل)</option><option selected>متوسط (۴۸ پیکسل)</option></select></label>
+            <label>فاصله از پایین صفحه (۸ تا ۱۶۰ پیکسل)<input value="۲۰"></label>
+          </div>
+          <label>عنوان بالای لیست<input value="پشتیبانی"></label>
+          <label class="chk"><input type="checkbox" checked> در صفحه‌های سبد، تسویه و سفارش نمایش داده نشود (برای اینکه مزاحم خرید نباشد)</label>
+        </div>
+        <div class="card scroll">
+          <h2>کانال‌های پشتیبانی (تا ۶ مورد)</h2>
+          <p class="mut">فقط ردیف‌هایی که «مقدار» دارند ذخیره می‌شوند. تلفن: با لمس، گوشی شمارهٔ شما را برای تماس باز می‌کند. پیام‌رسان‌ها: نام کاربری (یا لینک کامل همان سرویس) را بنویسید.</p>
+          <table><tr><th>نوع</th><th>نام نمایشی (اختیاری)</th><th>مقدار</th><th>فعال</th></tr>
+            <tr><td><select><option selected>واتس‌اپ</option><option>تلگرام</option><option>تلفن</option></select></td><td><input value=""></td><td><input dir="ltr" value="09120000000"></td><td><input type="checkbox" checked></td></tr>
+            <tr><td><select><option>واتس‌اپ</option><option selected>تلگرام</option><option>تلفن</option></select></td><td><input value=""></td><td><input dir="ltr" value="decomal_support"></td><td><input type="checkbox" checked></td></tr>
+            <tr><td><select><option>واتس‌اپ</option><option>تلگرام</option><option selected>تلفن</option></select></td><td><input value="پشتیبانی تلفنی"></td><td><input dir="ltr" value="02188000000"></td><td><input type="checkbox" checked></td></tr>
+            <tr><td><select><option selected>ایتا</option></select></td><td><input value=""></td><td><input dir="ltr" value=""></td><td><input type="checkbox"></td></tr>
+          </table>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== تماس و پیام‌ها ===================== -->
+    <section class="view" id="view-contact">
+      <h1>تماس و پیام‌ها</h1>
+      <form class="card grid2" onsubmit="return false">
+        <h2 class="full">اطلاعات تماس (در سایت نمایش داده می‌شود؛ خالی = نمایش داده نمی‌شود)</h2>
+        <label>تلفن<input value="۰۲۱۸۸۰۰۰۰۰۰"></label>
+        <label>ایمیل<input type="email" dir="ltr" value="info@decomal.example"></label>
+        <label class="full">نشانی<input value="تهران، خیابان ولیعصر، نرسیده به پارک ملت، ساختمان اداری-تجاری، طبقه دوم"></label>
+        <h3 class="full">شبکه‌های اجتماعی و پیام‌رسان‌ها <small class="mut">(لینک کامل صفحه یا کانال؛ خالی = نمایش داده نمی‌شود)</small></h3>
+        <label>اینستاگرام (لینک https)<input dir="ltr" placeholder="https://" value="https://instagram.com/decomal.shop"></label>
+        <label>تلگرام (لینک https)<input dir="ltr" placeholder="https://" value="https://t.me/decomal_shop"></label>
+        <label>روبیکا (لینک https)<input dir="ltr" placeholder="https://" value=""></label>
+        <label>ایتا (لینک https)<input dir="ltr" placeholder="https://" value=""></label>
+        <div class="bar full"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <div class="card scroll"><h2>پیام‌های دریافتی</h2>
+        <table><tr><th>تاریخ</th><th>فرستنده</th><th>پیام</th><th></th></tr>
+          <tr><td>۱۴۰۵/۰۸/۲۷</td><td>مریم ک.<br><small dir="ltr">۰۹۱۲۳۳۴۴۵۵۶</small></td><td>سلام، سفارشم کی ارسال می‌شه؟</td><td><form onsubmit="return false"><button class="btn ghost" type="submit">رسیدگی شد</button></form></td></tr>
+          <tr><td>۱۴۰۵/۰۸/۲۶</td><td>امیر ح.<br><small dir="ltr">۰۹۳۵۱۱۲۲۳۳۴</small></td><td>آیا امکان تعویض محصول هست؟</td><td><form onsubmit="return false"><button class="btn ghost" type="submit">رسیدگی شد</button></form></td></tr>
+          <tr class="mut"><td>۱۴۰۵/۰۸/۲۰</td><td>نگار ا.<br><small dir="ltr">۰۹۱۹۸۸۷۷۶۶۵</small></td><td>ممنون از همکاری خوبتون، بسته‌بندی عالی بود.</td><td></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== تنظیمات پنل ===================== -->
+    <section class="view" id="view-store_settings">
+      <h1>تنظیمات پنل</h1>
+      <p class="mut">تنظیمات عمومیِ خودِ پنل و سایت. قوانین سفارش در «تنظیمات سفارش» و رنگ و چیدمان در «ظاهر و چیدمان» است.</p>
+      <form class="card stack" onsubmit="return false">
+        <h2>راهنمای پنل</h2>
+        <label class="chk"><input type="checkbox" checked> نمایش راهنما (دکمه‌های «؟» کنار گزینه‌ها)</label>
+        <p class="mut">پیشنهاد: تا وقتی با پنل آشنا نشده‌اید روشن بماند. با خاموش کردن، دکمه‌های «؟» دیگر نمایش داده نمی‌شوند.</p>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <form class="card stack" onsubmit="return false">
+        <h2>بازنشانی ظاهر سایت</h2>
+        <p class="mut">رنگ‌ها، چیدمان صفحهٔ اصلی، CSS دلخواه و اندازه‌ها به حالت اولیه برمی‌گردند. نام فروشگاه، شعار، متن نوار اطلاع‌رسانی و متن فوتر حفظ می‌شود. محصولات و سفارش‌ها هیچ تغییری نمی‌کنند.</p>
+        <label class="chk"><input type="checkbox"> مطمئنم؛ ظاهر به حالت پیش‌فرض برگردد</label>
+        <div class="bar"><button class="btn ghost" type="submit">بازنشانی ظاهر</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== درگاه پرداخت ===================== -->
+    <section class="view" id="view-payment">
+      <h1>درگاه پرداخت</h1>
+      <form class="card stack" onsubmit="return false">
+        <h2>درگاه‌های پرداخت فعال (چندتا را می‌توانید همزمان فعال کنید)</h2>
+        <div class="gwrow"><label class="chk"><input type="checkbox" checked> زرین‌پال — <b class="ok">اطلاعات وارد شده</b></label><label class="gwmin">حداقل مبلغ خرید (تومان)<input placeholder="بدون محدودیت"></label></div>
+        <div class="gwrow"><label class="chk"><input type="checkbox" disabled> ترب‌پی — <span class="mut">اطلاعات در صفحه «اتصالات» وارد نشده</span></label><label class="gwmin">حداقل مبلغ خرید (تومان)<input placeholder="بدون محدودیت"></label></div>
+        <div class="gwrow"><label class="chk"><input type="checkbox" disabled> آقای پرداخت — <span class="mut">اطلاعات در صفحه «اتصالات» وارد نشده</span></label><label class="gwmin">حداقل مبلغ خرید (تومان)<input placeholder="بدون محدودیت"></label></div>
+        <p class="mut">اگر هیچ درگاهی و هیچ روش بدون‌درگاهی فعال نباشد، ثبت سفارش غیرفعال است. اگر بیش از یکی تیک بخورد، مشتری هنگام پرداخت یکی را انتخاب می‌کند.</p>
+        <p class="mut">کلیدهای درگاه (مرچنت‌کد / پین) در صفحه «اتصالات» وارد می‌شوند و به‌صورت رمزنگاری‌شده ذخیره می‌شوند (یا همچنان از فایل <code dir="ltr">.env</code> خوانده می‌شوند). «پیکربندی‌شده» به معنی آزمایش‌شدن با درگاه واقعی نیست؛ پیش از فروش واقعی یک پرداخت آزمایشی کوچک انجام دهید.</p>
+        <h2>ثبت سفارش بدون پرداخت آنلاین</h2>
+        <div class="flash">این گزینه برای <b>تست سفارش</b> یا فروش با <b>پرداخت در محل / هماهنگی تلفنی</b> است. سفارش بدون رفتن به درگاه ثبت می‌شود و وضعیت آن «در حال پردازش» است؛ پرداخت را خودتان پیگیری می‌کنید.</div>
+        <label class="chk"><input type="checkbox"> ثبت سفارش بدون درگاه (پرداخت در محل / آزمایشی) فعال باشد</label>
+        <label>عنوان این روش برای مشتری<input value="پرداخت در محل / هماهنگی تلفنی"></label>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <div class="card"><p>تنظیمات پیامک (ورود با کد، پیامک سفارش‌ها) در صفحه <a href="#" data-view="sms">پیامک</a> است. وضعیت درایور: <b dir="ltr">melipayamak</b> — <b class="ok">پیکربندی شده</b></p></div>
+    </section>
+
+    <!-- ===================== پیامک ===================== -->
+    <section class="view" id="view-sms">
+      <h1>پیامک</h1>
+      <div class="card"><p>درایور فعلی: <b dir="ltr">melipayamak</b> — <b class="ok">پیکربندی شده</b></p>
+        <p class="mut">اطلاعات اتصال (نام کاربری، رمز، شماره خط) فقط در فایل <code dir="ltr">.env</code> روی سرور وارد می‌شود، نه اینجا. ارسال پیامک‌های متنی سفارش‌ها به «شماره خط ارسال‌کننده» نیاز دارد (تنظیم شده). تا آزمایش با حساب واقعی شما، کارکرد ارسال تأییدشده نیست؛ از دکمه «ارسال پیامک آزمایشی» استفاده کنید.</p></div>
+      <form class="card stack" onsubmit="return false">
+        <label class="chk"><input type="checkbox" checked> ارسال پیامک سفارش‌ها فعال باشد (کلید اصلی)</label>
+        <label>شماره موبایل مدیر (برای پیامک‌های مدیر)<input dir="ltr" value="09120000000" placeholder="09123456789"></label>
+        <div class="card" style="margin:0"><label class="chk"><input type="checkbox" checked> پیامک تأیید سفارش به مشتری</label><label>متن پیام<textarea rows="2">{name} عزیز، سفارش شما به شماره {number} ثبت شد. مبلغ: {total} تومان.</textarea></label></div>
+        <div class="card" style="margin:0"><label class="chk"><input type="checkbox" checked> پیامک تغییر وضعیت سفارش</label><label>متن پیام<textarea rows="2">سفارش {number} شما ارسال شد. پیگیری: {link}</textarea></label></div>
+        <div class="card" style="margin:0"><label class="chk"><input type="checkbox"> پیامک کد ورود (OTP)</label><label>متن پیام<textarea rows="2">کد ورود شما به {site}: </textarea></label></div>
+        <p class="mut">متغیرهای قابل استفاده در متن: <code dir="ltr">{name}</code> نام مشتری، <code dir="ltr">{number}</code> شماره سفارش، <code dir="ltr">{total}</code> مبلغ کل (تومان)، <code dir="ltr">{site}</code> نام فروشگاه، <code dir="ltr">{link}</code> لینک پیگیری سفارش.</p>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <form class="card" onsubmit="return false"><h2>آزمایش</h2><p class="mut">یک پیامک آزمایشی به شماره مدیر (ذخیره‌شده) ارسال می‌شود.</p><button class="btn ghost" type="submit">ارسال پیامک آزمایشی</button></form>
+    </section>
+
+    <!-- ===================== اتصالات ===================== -->
+    <section class="view" id="view-integrations">
+      <h1>اتصالات</h1>
+      <div class="card"><p class="mut">اطلاعات این صفحه در دیتابیس <b>رمزنگاری‌شده</b> ذخیره می‌شود و بعد از ذخیره هرگز کامل نمایش داده نمی‌شود. کادر خالی = بدون تغییر. اگر بعداً کلید <code dir="ltr">APP_KEY</code> فایل <code>.env</code> را عوض کنید، باید این اطلاعات را دوباره وارد کنید.</p></div>
+      <form class="stack" onsubmit="return false">
+        <div class="card stack"><h2>پیامک (ملی‌پیامک)</h2>
+          <p>وضعیت: <b class="ok">پیکربندی شده</b> — درایور فعلی: <b dir="ltr">melipayamak</b></p>
+          <label>سرویس پیامک<select><option>غیرفعال</option><option selected>ملی‌پیامک</option></select></label>
+          <label>نام کاربری پنل ملی‌پیامک — <b class="ok">ذخیره‌شده •••۸۸۴۲</b><input type="password" autocomplete="new-password" dir="ltr" placeholder="برای تغییر، مقدار جدید را بنویسید"></label>
+          <label class="chk"><input type="checkbox"> حذف مقدار ذخیره‌شده</label>
+          <label>رمز / توکن وب‌سرویس — <b class="ok">ذخیره‌شده •••••۲۱۰</b><input type="password" autocomplete="new-password" dir="ltr" placeholder="برای تغییر، مقدار جدید را بنویسید"></label>
+          <label class="chk"><input type="checkbox"> حذف مقدار ذخیره‌شده</label>
+          <label>شماره خط ارسال‌کننده (برای پیامک سفارش‌ها) — <b class="ok">ذخیره‌شده ۳۰۰۰...۸۸۴۲</b><input type="password" autocomplete="new-password" dir="ltr" placeholder="3000..."></label>
+          <label class="chk"><input type="checkbox"> حذف مقدار ذخیره‌شده</label>
+          <label>کد پترن (اختیاری؛ برای کد ورود) — <span class="mut">وارد نشده</span><input type="password" autocomplete="new-password" dir="ltr" placeholder="12345"></label>
+          <p class="mut">پس از ذخیره، از صفحهٔ «پیامک» دکمهٔ «ارسال پیامک آزمایشی» را بزنید. تا وقتی با حساب واقعی شما آزمایش نشود، کارکرد ارسال تأییدشده نیست. رویدادها و متن پیام‌ها در صفحهٔ «پیامک» تنظیم می‌شود.</p>
+        </div>
+        <div class="card stack"><h2>درگاه زرین‌پال</h2>
+          <label>مرچنت‌کد — <b class="ok">ذخیره‌شده ••••••••۹۹۰۱</b><input type="password" autocomplete="new-password" dir="ltr" placeholder="برای تغییر، مقدار جدید را بنویسید"></label>
+          <label class="chk"><input type="checkbox"> حذف مقدار ذخیره‌شده</label>
+          <label class="chk"><input type="checkbox"> حالت آزمایشی (سندباکس)</label>
+        </div>
+        <div class="card stack"><h2>درگاه ترب‌پی (پرداخت اعتباری) — تأییدنشده</h2>
+          <p class="bad"><b>هشدار:</b> مستندات رسمی ترب‌پی در زمان ساخت این نسخه در دسترس نبود، بنابراین مسیرهای API حدس زده نشده‌اند. پس از ثبت‌نام و دریافت دسترسی از ترب‌پی، اطلاعات و مسیرها را از مستندات رسمی آن‌ها اینجا وارد کنید. درگاه تا تکمیل همهٔ موارد ضروری (به‌جز «مسیر تسویه» و «نشانی پایه») در صفحهٔ «درگاه پرداخت» قابل فعال‌شدن نیست. پیش از فروش واقعی با حساب آزمایشی ترب‌پی تست کنید.</p>
+          <label>Client ID — <span class="mut">وارد نشده</span><input type="password" dir="ltr" autocomplete="new-password"></label>
+          <label>Client Secret — <span class="mut">وارد نشده</span><input type="password" dir="ltr" autocomplete="new-password"></label>
+          <label>نام کاربری — <span class="mut">وارد نشده</span><input type="password" dir="ltr" autocomplete="new-password"></label>
+          <label>رمز عبور — <span class="mut">وارد نشده</span><input type="password" dir="ltr" autocomplete="new-password"></label>
+          <label>نشانی پایه (خالی = https://cpg.torobpay.com) — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="https://..."></label>
+          <label>مسیر دریافت توکن — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="/..."></label>
+          <label>مسیر شروع پرداخت — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="/..."></label>
+          <label>مسیر تأیید پرداخت — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="/..."></label>
+          <label>مسیر تسویه (اگر مستندات لازم می‌داند) — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="/..."></label>
+        </div>
+        <div class="card stack"><h2>درگاه آقای پرداخت</h2>
+          <label>پین — <span class="mut">وارد نشده</span><input type="password" dir="ltr" autocomplete="new-password"></label>
+          <p class="mut">انتخاب درگاه فعال در صفحهٔ «درگاه پرداخت» است.</p>
+        </div>
+        <details class="card ddet"><summary><h2>ترب (فید محصولات) <small class="mut">— کم‌کاربرد، برای باز شدن بزنید</small></h2></summary>
+          <div class="stack" style="margin-top:10px">
+            <label class="chk"><input type="checkbox"> فید عمومی محصولات فعال باشد</label>
+            <label>توکن محافظ فید (اختیاری) — <span class="mut">وارد نشده</span><input type="password" dir="ltr" placeholder="مثلاً abc12345xyz"></label>
+            <p class="mut">نشانی فید: <code dir="ltr">https://decomal.example/feed/torob.json</code> — اگر توکن بگذارید باید به‌شکل <code dir="ltr">?token=توکن</code> فراخوانی شود. این فقط یک فید JSON عمومی است؛ <b>اتصال به پنل ترب انجام نشده</b> و قالب دقیق ترب باید پس از ثبت‌نام شما و دریافت مستندات رسمی ترب تطبیق داده شود. درگاه «ترب‌پی» جداست (بالاتر).</p>
+          </div>
+        </details>
+        <div class="bar"><button class="btn" type="submit">ذخیره اتصالات</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== رمز عبور ===================== -->
+    <section class="view" id="view-password">
+      <h1>تغییر رمز عبور</h1>
+      <form class="card form stack" onsubmit="return false">
+        <label>رمز فعلی<input type="password" autocomplete="current-password"></label>
+        <label>رمز جدید (حداقل ۱۲ نویسه)<input type="password" minlength="12" autocomplete="new-password"></label>
+        <label>تکرار رمز جدید<input type="password" minlength="12" autocomplete="new-password"></label>
+        <button class="btn" type="submit">ذخیره</button>
+      </form>
+    </section>
+
+    <!-- ===================== امنیت ===================== -->
+    <section class="view" id="view-security">
+      <h1>امنیت</h1>
+      <div class="card stack">
+        <h2>ورود دومرحله‌ای</h2>
+        <p><b class="ok">فعال است.</b> برای ورود به پنل، علاوه بر رمز، کد برنامهٔ احراز هویت لازم است.</p>
+        <form class="stack" onsubmit="return false">
+          <label>رمز عبور فعلی<input type="password" autocomplete="current-password"></label>
+          <label>کد برنامه<input inputmode="numeric" maxlength="8" dir="ltr" autocomplete="one-time-code"></label>
+          <button class="btn ghost" type="submit">غیرفعال‌کردن</button>
+        </form>
+        <details><summary class="mut" style="cursor:pointer">نمایش حالتِ «شروع فعال‌سازی» (نمونه)</summary>
+          <div class="stack" style="margin-top:10px">
+            <p>۱) در گوشی برنامهٔ احراز هویت (Google Authenticator، Microsoft Authenticator و …) را باز کنید و «افزودن حساب با کلید» را بزنید.</p>
+            <p>کلید: <code dir="ltr" style="font-size:16px;letter-spacing:2px">JBSW Y3DP EHPK 3PXP</code></p>
+            <p class="mut">نوع: مبتنی بر زمان (Time-based)، ۶ رقم.</p>
+            <label>۲) کد ۶ رقمی نمایش‌داده‌شده<input inputmode="numeric" maxlength="8" dir="ltr" autocomplete="one-time-code"></label>
+            <button class="btn" type="button">تأیید و فعال‌سازی</button>
+          </div>
+        </details>
+      </div>
+      <form class="card stack" onsubmit="return false">
+        <h2>سازگاری با ترجمهٔ گوگل</h2>
+        <label class="chk"><input type="checkbox" checked> اجازهٔ بارگذاری اسکریپت و استایل «ترجمهٔ گوگل» در سایت</label>
+        <p class="mut">سایت هیچ مسدودسازی بر اساس ربات/نوع مرورگر ندارد. با این گزینه فقط چند دامنهٔ رسمی گوگل (translate.googleapis.com، gstatic.com، translate.google.com) در سیاست امنیتی محتوا (CSP) مجاز می‌شود تا صفحهٔ ترجمه‌شده درست کار کند. اگر نیازی ندارید خاموشش کنید.</p>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+      <div class="card stack">
+        <h2>بررسی تنظیمات امنیتی</h2>
+        <p class="mut">این بررسی فقط تنظیمات خود سرور/سایت را می‌سنجد و جایگزین تست نفوذ حرفه‌ای نیست.</p>
+        <table><tr><th>مورد</th><th>وضعیت</th><th>اگر ✗ بود</th></tr>
+          <tr><td>اتصال HTTPS فعال است</td><td><b class="ok">✓</b></td><td></td></tr>
+          <tr><td>ورود دومرحله‌ای مدیر فعال است</td><td><b class="ok">✓</b></td><td></td></tr>
+          <tr><td>رمز عبور پیش‌فرض تغییر کرده است</td><td><b class="ok">✓</b></td><td></td></tr>
+          <tr><td>نسخهٔ پشتیبان اخیر دارید</td><td><b class="bad">✗</b></td><td class="mut">یک نسخهٔ پشتیبان دیتابیس و فایل‌ها تهیه کنید.</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h2>گزارش ورودها (۶۰ رویداد آخر)</h2>
+        <table><tr><th>زمان</th><th>رویداد</th><th>کاربر</th><th>IP</th></tr>
+          <tr><td dir="ltr">1405-08-28 09:12</td><td>ورود موفق</td><td dir="ltr">admin</td><td dir="ltr">185.143.x.x</td></tr>
+          <tr><td dir="ltr">1405-08-27 23:40</td><td>تلاش ناموفق ورود</td><td dir="ltr">admin</td><td dir="ltr">37.98.x.x</td></tr>
+          <tr><td dir="ltr">1405-08-26 14:05</td><td>ورود موفق</td><td dir="ltr">sales1</td><td dir="ltr">5.126.x.x</td></tr>
+          <tr><td dir="ltr">1405-08-25 11:30</td><td>فعال‌سازی ورود دومرحله‌ای</td><td dir="ltr">admin</td><td dir="ltr">185.143.x.x</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== کد تحلیلگر ===================== -->
+    <section class="view" id="view-code">
+      <h1>کد تحلیلگر و اسکریپت دلخواه</h1>
+      <div class="card"><p class="bad"><b>هشدار:</b> هر کدی که اینجا بگذارید روی همهٔ صفحه‌های فروشگاه (بازدیدکنندگان) اجرا می‌شود. فقط کدی را بگذارید که از منبع معتبر (مثلاً خود گوگل آنالیتیکس) گرفته‌اید. کد نامعتبر می‌تواند اطلاعات مشتری‌ها را بدزدد.</p>
+        <p class="mut">سایت سیاست امنیتی (CSP) دارد: اسکریپت‌های داخل کد شما خودکار مجاز می‌شوند و دامنه‌های بیرونی موجود در کد به فهرست مجاز افزوده می‌شود. برخی سرویس‌ها دامنه‌های دیگری هم صدا می‌زنند؛ پیش‌تنظیم‌های پایین را بزنید یا دامنه را دستی اضافه کنید.</p></div>
+      <form class="stack" onsubmit="return false">
+        <div class="card stack">
+          <label>کد بخش head<textarea rows="8" dir="ltr" placeholder='&lt;script async src="https://www.googletagmanager.com/gtag/js?id=..."&gt;&lt;/script&gt;'>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"&gt;&lt;/script&gt;</textarea></label>
+          <label>کد پایین صفحه<textarea rows="5" dir="ltr"></textarea></label>
+          <label class="chk"><input type="checkbox" checked> در سبد، پرداخت، حساب کاربری و ورود اجرا نشود (پیشنهادی)</label>
+        </div>
+        <div class="card stack">
+          <h2>اجازهٔ ارتباط با سرویس‌های آماده</h2>
+          <label class="chk"><input type="checkbox" checked> گوگل آنالیتیکس / تگ منیجر <span class="mut" dir="ltr">(googletagmanager.com google-analytics.com)</span></label>
+          <label class="chk"><input type="checkbox"> پیکسل اینستاگرام/متا <span class="mut" dir="ltr">(connect.facebook.net)</span></label>
+          <label>دامنه‌های اضافه (هر خط یکی، مثل https://stats.example.com)<textarea rows="3" dir="ltr"></textarea></label>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+      </form>
+    </section>
+
+    <!-- ===================== مدیران و دسترسی‌ها ===================== -->
+    <section class="view" id="view-admins">
+      <h1>مدیران و دسترسی‌ها</h1>
+      <p class="mut">برای هر همکار یک حساب جدا بسازید و فقط به بخش‌هایی که لازم دارد دسترسی بدهید. «مالک» به همه‌چیز دسترسی دارد. هر مدیر می‌تواند در بخش «امنیت» ورود دومرحله‌ای خودش را فعال کند.</p>
+      <div class="ulist">
+        <div class="ucard">
+          <div class="uhead"><span class="av">A</span>
+            <div class="uinfo"><b dir="ltr">admin</b> <span class="chip me">شما</span>
+              <div class="chips"><span class="chip owner">مالک — دسترسی کامل</span><span class="chip ok">ورود دومرحله‌ای فعال</span></div>
+              <small class="mut">آخرین ورود: ۱۴۰۵/۰۸/۲۸</small>
+            </div>
+          </div>
+          <details class="aedit"><summary>ویرایش دسترسی / رمز</summary>
+            <form class="stack" onsubmit="return false">
+              <label class="chk"><input type="checkbox" checked> مالک (دسترسی کامل)</label>
+              <div class="permgrid">
+                <label class="perm"><input type="checkbox" checked><span><b>فروش و سفارش‌ها</b><small>سفارش‌ها، مشتریان، کدهای تخفیف، روش‌های ارسال، گزارش فروش.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>کاتالوگ</b><small>محصولات، دسته‌بندی‌ها، موجودی، نظرات.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>محتوا</b><small>مقاله‌ها، صفحات، بنرها، منوها.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>ظاهر و ارتباط</b><small>ظاهر سایت، محتوای صفحهٔ اصلی، پشتیبانی، پیام‌های تماس.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>تنظیمات</b><small>درگاه پرداخت، پیامک، اتصالات، امنیت و مدیران.</small></span></label>
+              </div>
+              <label>رمز جدید (خالی = بدون تغییر)<input type="password" minlength="12" autocomplete="new-password"></label>
+              <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+            </form>
+          </details>
+        </div>
+        <div class="ucard">
+          <div class="uhead"><span class="av">S</span>
+            <div class="uinfo"><b dir="ltr">sales1</b>
+              <div class="chips"><span class="chip">فروش و سفارش‌ها</span><span class="chip">کاتالوگ</span><span class="chip warn">بدون ورود دومرحله‌ای</span></div>
+              <small class="mut">آخرین ورود: ۱۴۰۵/۰۸/۲۶</small>
+            </div>
+          </div>
+          <details class="aedit"><summary>ویرایش دسترسی / رمز</summary>
+            <form class="stack" onsubmit="return false">
+              <label class="chk"><input type="checkbox"> مالک (دسترسی کامل)</label>
+              <div class="permgrid">
+                <label class="perm"><input type="checkbox" checked><span><b>فروش و سفارش‌ها</b><small>سفارش‌ها، مشتریان، کدهای تخفیف، روش‌های ارسال، گزارش فروش.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>کاتالوگ</b><small>محصولات، دسته‌بندی‌ها، موجودی، نظرات.</small></span></label>
+                <label class="perm"><input type="checkbox"><span><b>محتوا</b><small>مقاله‌ها، صفحات، بنرها، منوها.</small></span></label>
+                <label class="perm"><input type="checkbox"><span><b>ظاهر و ارتباط</b><small>ظاهر سایت، محتوای صفحهٔ اصلی، پشتیبانی، پیام‌های تماس.</small></span></label>
+                <label class="perm"><input type="checkbox"><span><b>تنظیمات</b><small>درگاه پرداخت، پیامک، اتصالات، امنیت و مدیران.</small></span></label>
+              </div>
+              <label>رمز جدید (خالی = بدون تغییر)<input type="password" minlength="12" autocomplete="new-password"></label>
+              <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+            </form>
+            <form onsubmit="return false"><button class="btn ghost danger" type="submit">حذف این مدیر</button></form>
+          </details>
+        </div>
+        <div class="ucard">
+          <div class="uhead"><span class="av">M</span>
+            <div class="uinfo"><b dir="ltr">content1</b>
+              <div class="chips"><span class="chip">محتوا</span><span class="chip">ظاهر و ارتباط</span><span class="chip warn">بدون ورود دومرحله‌ای</span></div>
+              <small class="mut">آخرین ورود: هنوز وارد نشده</small>
+            </div>
+          </div>
+          <details class="aedit"><summary>ویرایش دسترسی / رمز</summary>
+            <form class="stack" onsubmit="return false">
+              <label class="chk"><input type="checkbox"> مالک (دسترسی کامل)</label>
+              <div class="permgrid">
+                <label class="perm"><input type="checkbox"><span><b>فروش و سفارش‌ها</b><small>سفارش‌ها، مشتریان، کدهای تخفیف، روش‌های ارسال، گزارش فروش.</small></span></label>
+                <label class="perm"><input type="checkbox"><span><b>کاتالوگ</b><small>محصولات، دسته‌بندی‌ها، موجودی، نظرات.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>محتوا</b><small>مقاله‌ها، صفحات، بنرها، منوها.</small></span></label>
+                <label class="perm"><input type="checkbox" checked><span><b>ظاهر و ارتباط</b><small>ظاهر سایت، محتوای صفحهٔ اصلی، پشتیبانی، پیام‌های تماس.</small></span></label>
+                <label class="perm"><input type="checkbox"><span><b>تنظیمات</b><small>درگاه پرداخت، پیامک، اتصالات، امنیت و مدیران.</small></span></label>
+              </div>
+              <label>رمز جدید (خالی = بدون تغییر)<input type="password" minlength="12" autocomplete="new-password"></label>
+              <div class="bar"><button class="btn" type="submit">ذخیره</button></div>
+            </form>
+            <form onsubmit="return false"><button class="btn ghost danger" type="submit">حذف این مدیر</button></form>
+          </details>
+        </div>
+      </div>
+      <form class="card stack" onsubmit="return false">
+        <h2>+ مدیر جدید</h2>
+        <div class="grid2"><label>نام کاربری (انگلیسی)<input dir="ltr" autocomplete="off"></label><label>رمز عبور (حداقل ۱۲ نویسه)<input type="password" minlength="12" autocomplete="new-password"></label></div>
+        <label class="chk"><input type="checkbox"> مالک (دسترسی کامل، از جمله ساخت و حذف مدیران)</label>
+        <div class="permgrid">
+          <label class="perm"><input type="checkbox"><span><b>فروش و سفارش‌ها</b><small>سفارش‌ها، مشتریان، کدهای تخفیف، روش‌های ارسال، گزارش فروش.</small></span></label>
+          <label class="perm"><input type="checkbox"><span><b>کاتالوگ</b><small>محصولات، دسته‌بندی‌ها، موجودی، نظرات.</small></span></label>
+          <label class="perm"><input type="checkbox"><span><b>محتوا</b><small>مقاله‌ها، صفحات، بنرها، منوها.</small></span></label>
+          <label class="perm"><input type="checkbox"><span><b>ظاهر و ارتباط</b><small>ظاهر سایت، محتوای صفحهٔ اصلی، پشتیبانی، پیام‌های تماس.</small></span></label>
+          <label class="perm"><input type="checkbox"><span><b>تنظیمات</b><small>درگاه پرداخت، پیامک، اتصالات، امنیت و مدیران.</small></span></label>
+        </div>
+        <div class="bar"><button class="btn" type="submit">ساخت مدیر</button></div>
+      </form>
+    </section>
+
+  </main>
+</div>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
